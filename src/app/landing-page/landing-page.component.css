@@ -1,0 +1,54 @@
+body{
+  background-color: #fff7e1;
+}
+
+h1{
+  font-family: serif;
+}
+
+#btn1{
+    background: #fffca8;
+    font-family: serif;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+}
+
+#btn2{
+    background: #fffff;
+    font-family: serif;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+}
+ul#one{
+  color: gray;
+  float: left;
+}
+
+ul#two{
+  color: orange;
+  float: right;
+}
+
+li{
+  border: 1px solid gray;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.baloo-font-1{
+color: gray;
+font-weight: bold;
+font-size: 2em;
+text-align: center;
+}
+
+.baloo-font-2{
+  color: orange;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
