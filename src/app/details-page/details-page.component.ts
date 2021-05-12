@@ -18,5 +18,4 @@ export class DetailsPageComponent implements OnInit {
     this.selectedBtn=valueIs;
   }
 
-
 }

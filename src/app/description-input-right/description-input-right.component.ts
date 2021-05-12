@@ -11,5 +11,8 @@ export class DescriptionInputRightComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+valueA1=0;
+  updateValue(event:any,num:any,type:any) {
+    
+  }
 }
