@@ -39,11 +39,11 @@ export class DescriptionComponent implements OnInit {
       }
   };
     mangoesForYou:any= {
-      header:'',
+      header:'Devgad Alphonso MAngoes',
       imgsrc:'',
       description:{
-        header:'',
-        first:'',
+        header:'Available in 3 sizes :',
+        first:'A1',
         second:{
           a:'',
           b:'',
