@@ -1,0 +1,55 @@
+.container{
+    background-color: #F7EDD0;
+    margin-top: 2rem;
+    border-radius: 4%;
+}
+
+button{
+    margin: 0 0.5rem !important;
+    border: none !important;
+    background-color: #FFC857;
+    border-radius: 5%;
+    font-size: large !important;
+}
+
+#count{
+  margin-bottom: 0%
+}
+
+.countBtn{
+  background-color: #FFC857;
+  border-radius: 8%;
+}
+
+button:hover{
+    background-color: #FFE0A3;
+    transition-duration: 0.5s;
+}
+
+h5{
+  margin-bottom: none !important;
+}
+
+#orderSummaryHeader{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.summaryBox{
+  background-color: white;
+  width: auto;
+  padding: 3%;
+  border: 1rem white;
+  border-radius: 1rem;
+
+}
+
+#orderNowBtn{
+    font-size: 2rem !important;
+    border-radius: 20px !important;
+    font-weight: bold ;
+    padding: 1rem !important;
+    background-color: #FFE0A3;
+}
