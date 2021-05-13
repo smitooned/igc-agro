@@ -65,7 +65,7 @@ export class DetailsPageComponent implements OnInit {
     //console.log("event reached parent", cartUpdate);
     if(parseInt(cartUpdate.countUpdate) > 0) {
       let newItem = this.item;
-      let newItemUID = uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+      let newItemUID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
       newItem.productType = cartUpdate.productType;
       newItem.productSize = cartUpdate.productSize;
       newItem.itemID = newItemUID;
