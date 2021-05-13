@@ -1,10 +1,8 @@
-.shipping-box-container .shipping-box .no-form{
-    
+.shipping-box-container .shipping-box .no-form {
     display: flex;
-    
 }
 
-.shipping-box{
+.shipping-box {
     width: 100%;
     background-color: white;
     border-radius: 10px;
@@ -12,29 +10,32 @@
     padding: 15px;
 }
 
-.shipping-box-container .shipping-box .box-name{
+.shipping-box-container .shipping-box .box-name {
     display: inline-block;
     margin: auto 0;
     width: 50%;
     margin-left: 15px;
 }
 
-.shipping-details-button{
+.shipping-details-button {
+    display: inline-flex;
+    width: 50%;
+    align-items: center;
     text-align: center;
-    border: 1px solid #F29722;
-    margin: auto 0;
-    color: #F29722;
+    border: 1px solid #f29722;
+    color: #f29722;
     margin-right: 15px;
+    justify-content: center;
 }
 
-.shipping-form input{
+.shipping-form input {
     margin-top: 5px;
     width: 98%;
     margin-bottom: 15px;
     padding: 5px;
 }
 
-.shipping-form{
+.shipping-form {
     max-height: 45vh;
     overflow-y: scroll;
     height: 45vh;
