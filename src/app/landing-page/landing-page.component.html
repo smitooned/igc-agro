@@ -4,113 +4,86 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
       <!-- CSS only -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
       <link rel="stylesheet" href="/home.css">
       <title>Document</title>
    </head>
    <body>
-      <header>
-         <img id="logo" src="" alt="indiagold logo">
-      </header>
-      <section id="content1">
-         <div class="container hello">
+      <div class="container">
+        <div class="upper">
+          <header>
+             <img id="logo" src="../assets/indiaGoldAgro.png" alt="indiagold logo">
+          </header>
+
+          <div class="container">
             <div class="row">
-               <div class="col-8">
-                  <h1>Gift a mango box to your<br>loved ones this summer</h1>
-                  <div class="row">
-                     <div class="col-3">
-                        <p>Pack of 6<br>Devgad<br>Alphonso<br>Mangoes</p>
-                     </div>
-                     <div class="col-3">
-                        <p>COVID Care<br>Face Shield<br>Mask & gloves<br>Hand Sanitizers</p>
-                     </div>
-                     <div class="col-3">
-                        <p><b>PM</b>CARES<br>Rs 100/- per order</p>
-                     </div>
-                  </div>
-                  <div>
-                     <button id="btn1" type="button" name="button" routerLink="/details">Order Gift Box -> </button>
-                     <h1>OR</h1>
-                     <button id="btn2" type="button" name="button">Get mangoes for you</button>
-                  </div>
-               </div>
-               <div class="col-4">
-                  <img id="" src="img/mango.PNG" alt="mango">
-               </div>
-            </div>
-         </div>
-      </section>
-      <div class="container hello">
-         <div class="row">
-            <div class="col-8">
-            </div>
-            <!-- <div class="col-4">
-               col-4
-               </div> -->
-         </div>
-      </div>
-      <br><br><br>
-      <section>
-         <div class="container">
-            <h1>Why Devgad mangoes?</h1>
-            <p>The alphonso mango is a foreign fruit that came to India through Goa along with Alfonso De Albuquerque, the Portuguese explorer and military strategist who led many Portuguese invasions in 1600s.
-               From Goa, the alphonso mango travelled to different places like Ratnagiri, other konkan region and southern side of India as well.
-            </p>
-            <div class="row">
-               <div class="col-3">
-                  <img id="" src="" alt="chemical">
-                  <br>
-                  <h3>Chemical free</h3>
-               </div>
-               <div class="col-3">
-                  <img id="" src="" alt="organic">
-                  <br>
-                  <h3>100% Organic</h3>
-               </div>
-               <div class="col-3">
-                  <img id="" src="img/carbidefree.PNG" alt="carbidefree">
-                  <br>
-                  <h3>Carbide free</h3>
-               </div>
-            </div>
-         </div>
-      </section>
-      <br><br><br>
-      <div class="col-md-12 head">
-         <h3 class="baloo-font">
-            How to Identify Original Devgad Alphonso Mango?
-         </h3>
-      </div>
-      <div class="col-md-12">
-        <div class="pm-mangoes-point">
-           <div class="row">
-              <div class="col-4">
-                 <p class="baloo-font-1">Chemically Ripened Mango</p>
-                 <ul id="one">
-                    <li>These mangoes show uniformly yellow colour.<span>1</span></li>
-                    <li>Look &amp; feel hard. They aren’t ripened, its a biochemical reaction.<span>2</span></li>
-                    <li>Hard on your nose when you smell it. Non aromatic smell.<span>3</span></li>
-                    <li>Wrinkled, yet green, means they were harvested immature.<span>4</span></li>
-                 </ul>
+              <div class="col-6 leftSide">
+                <span class="tagLineLanding">Gift a Covid Box to your Loved Ones this Summer</span>
+                <div class="switchBtn">
+                  <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
+                    <img src="../assets/mango.svg" alt=""  data-btn="mangoes">
+                  </button>
+                  <button type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
+                    <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
+                  </button>
+                  <button type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
+                    <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
+                  </button>
+                </div>
+                <div class="">
+                  <span><b>{{showDetail.header}}</b></span>
+                  <p>{{showDetail.text.a}}<br> {{showDetail.text.b}}<br>{{showDetail.text.c}}</p>
+                </div>
               </div>
-              <div class="col-4">
-                 <img src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy/assets/images/vs.png" class="img-vs" alt="VS" style="left: 630.5px;">
-                 <img src="https://www.devgadmango.com/wp-content/uploads/2019/11/chemical-mango.png" alt="Chemically Ripened Mango" class="chemical">
-                 <img src="https://www.devgadmango.com/wp-content/uploads/2019/11/orignal-mango.png" alt="Original Alphonso Mango">
+
+              <div class="col-6 rightSide">
+                <img class="" id="tiltedImg" src="../assets/tiltedImg.png" alt="">
               </div>
-              <div class="col-4">
-                 <p class="baloo-font-2">Original Alphonso Mango</p>
-                 <ul id="two">
-                    <li>This Mangoes show gradients in yellows &amp; green color.</li>
-                    <li>Look and feel soft if they are naturally ripened in grass hay.</li>
-                    <li>The sweet, strong fragrance of Alphonso noticable from distance.</li>
-                    <li>Should not show wrinkles. If they are over ripe, they show wrinkles.</li>
-                 </ul>
-              </div>
-           </div>
+            </div>
+          </div>
+
+          <div class="orderNowLandingDiv">
+            <button id="orderNowLanding" class="btn" type="button" name="button">Order Gift Box -></button>
+          </div>
         </div>
+
+        <h3 class="OR">OR</h3>
+
+        <div class="row otherButtons">
+          <div class="col-6">
+            <button id="otherButtonA" class="btn" type="button" name="button">Get Mangoes<br>For You</button>
+          </div>
+          <div class="col-6">
+            <button id="otherButtonB" class="btn" type="button" name="button">Bulk<br>Order</button>
+          </div>
+        </div>
+
+        <div class="devgadMangoesDescription">
+          <h2>Why Devgad mangoes ?</h2>
+          <span>The Alphonso mango is a foreign fruit that came to India through Goa along with Alfonso De Albuquerque, the Portuguese explorer and military strategist who led many Portuguese invasions in the 1600s. From Goa, the Alphonso mango travelled to different places like Ratnagiri, other Konkan region and southern side of India as well.</span>
+        </div>
+
+        <div class="row devgadMangoesFeatures">
+          <div class="col-lg-4">
+            <img id="devgadMangoesFeaturesA" src="../assets/chemicalFree.svg" alt="Chemical Free">
+            <h2>Chemical Free</h2>
+          </div>
+          <div class="col-lg-4">
+            <img id="devgadMangoesFeaturesB" src="../assets/organic.svg" alt="100% organic">
+            <h2>100% Organic</h2>
+          </div>
+          <div class="col-lg-4">
+            <img id="devgadMangoesFeaturesC" src="../assets/carbideFree.svg" alt="Carbide Free">
+            <h2>Carbide Free</h2>
+          </div>
+        </div>
+
       </div>
+
+
       <!-- JavaScript Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>

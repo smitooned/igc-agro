@@ -1,54 +1,107 @@
 body{
-  background-color: #fff7e1;
+  font-family: 'Inter', sans-serif;
 }
 
-h1{
-  font-family: serif;
+.container{
+  padding: 0%;
 }
 
-#btn1{
-    background: #fffca8;
-    font-family: serif;
-    font-size: 2em;
-    font-weight: bold;
-    border-radius: 25px;
-    border: none;
+.upper{
+  background-color: #FFF7E1;
+  padding: 1rem;
 }
 
-#btn2{
-    background: #fffff;
-    font-family: serif;
-    font-size: 2em;
-    font-weight: bold;
-    border-radius: 25px;
-    border: none;
-}
-ul#one{
-  color: gray;
-  float: left;
+#logo{
+  width: 30%;
+  height: auto;
 }
 
-ul#two{
-  color: orange;
-  float: right;
+.leftSide{
+  background-color: #FFF7E1;
 }
 
-li{
-  border: 1px solid gray;
-  border-radius: 7px;
-  width: 100%;
+button{
+  padding: 4px;
 }
 
-.baloo-font-1{
-color: gray;
-font-weight: bold;
-font-size: 2em;
-text-align: center;
+.switchBtn{
+  padding: 0.3rem;
+  padding-left: 0%;
+  margin-left: -5px;
 }
 
-.baloo-font-2{
-  color: orange;
-  font-weight: bold;
-  font-size: 2em;
+.rightSide{
+  background-color: #FFF7E1;
+  overflow: hidden;
+}
+
+.tagLineLanding{
+  margin-bottom: 1rem;
+}
+
+#tiltedImg{
+    height: auto;
+    width: 120%;
+}
+
+.orderNowLandingDiv{
+  margin-top: 0.5rem;
   text-align: center;
+}
+
+#orderNowLanding{
+  background-color: #FCE5B5;
+  padding: 0.6rem 1rem;;
+  border-radius: 22px;
+}
+
+.OR{
+  text-align: center;
+  padding-top: 5px;
+}
+
+.otherButtons{
+  text-align: center;
+  padding: 1rem;
+}
+
+#otherButtonA{
+  width: 90%;
+  border: 1px #CCC8BC solid;
+  padding: 7px 12px;
+  border-radius: 4px;
+}
+
+#otherButtonB{
+  width: 90%;
+  border: 1px #CCC8BC solid;
+  padding: 7px 12px;
+  border-radius: 4px;
+}
+
+.devgadMangoesDescription{
+  padding: 5%;
+}
+
+.devgadMangoesFeatures{
+  text-align: center;
+  padding: 3%;
+}
+
+#devgadMangoesFeaturesA{
+  width: 40%;
+  height: auto;
+  padding: 3%;
+}
+
+#devgadMangoesFeaturesB{
+  width: 40%;
+  height: auto;
+  padding: 3%;
+}
+
+#devgadMangoesFeaturesC{
+  width: 40%;
+  height: auto;
+  padding: 3%;
 }

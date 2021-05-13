@@ -17,16 +17,17 @@
   <div class="container">
     <div class="row">
       <!-- left panel -->
-      <div class="col-3 d-flex flex-column align-items-start-center justify-content-center ">
-        <app-description-slider-left (newItemEvent)="addItem($event)"></app-description-slider-left>
+      <div class="col-lg-3 d-flex flex-column align-items-start-center justify-content-center" [ngSwitch]="cart.cartStage.currentStage">
+        <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="0"></app-description-slider-left>
+        <app-cart-navigator *ngSwitchCase="1"></app-cart-navigator>
       </div>
       <!-- main canvas: center -->
-      <div class="col-6" [ngSwitch]="cart.cartStage.currentStage">
+      <div class="col-lg-6" [ngSwitch]="cart.cartStage.currentStage">
         <app-description [btnType]="selectedBtn" *ngSwitchCase="0" ></app-description>
         <app-configure-boxes *ngSwitchCase="1" [cart]="cart" (boxConfigUpdatedByChild)="updateBoxConfig($event)"></app-configure-boxes>
       </div>
       <!-- right panel -->
-      <div class="col-3">
+      <div class="col-lg-3">
         <app-description-input-right (cartItemsUpdatedEvent)="updateCart($event)" (submitCartEvent)="updateCartStage($event)" [cart]="cart"></app-description-input-right>
       </div>
     </div>
