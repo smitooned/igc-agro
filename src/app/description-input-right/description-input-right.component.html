@@ -4,33 +4,35 @@
   <div class="d-flex justify-content-between">
     <span><b>Rs 500</b>/box</span>
     <div class="ms-auto countBtn">
-      <button type="button" name="button" (click)="updateValue($event,-1,'A1')">-</button>
-      <span id="count">{{valueA1}}</span>
-      <button type="button" name="button">+</button>
+      <button type="button" name="button" (click)="updateCart($event,-1,'A1', 'COVID Box')">-</button>
+      <span id="count">{{cart.items.A1.length}}</span>
+      <button type="button" name="button" (click)="updateCart($event,1,'A1', 'COVID Box')">+</button>
     </div>
   </div>
 </div>
 <br>
+
 <div class="summaryBox">
   <span>A2</span>
   <div class="d-flex justify-content-between">
     <span><b>Rs 500</b>/box</span>
     <div class="ms-auto countBtn">
-      <button type="button" name="button">-</button>
-      <span id="count">0</span>
-      <button type="button" name="button">+</button>
+      <button type="button" name="button" (click)="updateCart($event, -1, 'A2', 'COVID Box')">-</button>
+      <span id="count">{{cart.items.A2.length}}</span>
+      <button type="button" name="button" (click)="updateCart($event, 1, 'A2', 'COVID Box')">+</button>
     </div>
   </div>
 </div>
 <br>
+
 <div class="summaryBox">
 <span>A3</span>
   <div class="d-flex justify-content-between">
     <span><b>Rs 500</b>/box</span>
     <div class="ms-auto countBtn">
-      <button type="button" name="button">-</button>
-      <span id="count">0</span>
-      <button type="button" name="button">+</button>
+      <button type="button" name="button" (click)="updateCart($event, -1, 'A3', 'COVID Box')">-</button>
+      <span id="count">{{cart.items.A3.length}}</span>
+      <button type="button" name="button" (click)="updateCart($event, 1, 'A3', 'COVID Box')">+</button>
     </div>
   </div>
 </div>

@@ -1,0 +1,51 @@
+body{
+    background-color: #FCE5B5;
+}
+
+.container{
+    background-color: #F7EDD0;
+    margin-top: 2rem;
+    border-radius: 0.8rem;
+}
+
+.boxHeader{
+    margin: 1rem 0.6rem;
+    float: right;
+}
+
+.detailBox{
+    background-color: #FFFFFF;
+    padding: 0.1rem 1rem;
+    border-radius: 0.7rem;
+}
+
+button{
+    margin: 0.5rem !important;
+    border: none !important;
+    border-radius: 0.5rem;
+}
+
+.collapser{
+    background-color: #FFFFFF;
+    border: 2px #F29722 !important;
+    color: #F29722;
+}
+
+.submitter{
+    background-color: #F29722;
+    color: white;
+    padding: 0.3rem 1rem;
+}
+
+.discarder{
+    background-color: #FFFFFF;
+    color: #4B4E5E ;
+    padding: 0.3rem 1rem;
+}
+
+.col-sm-6{
+    background-color: #FCE5B5;
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 0.6rem 2.1rem;
+}

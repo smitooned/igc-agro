@@ -23,7 +23,7 @@
         <app-description [btnType]="selectedBtn"></app-description>
       </div>
       <div class="col-3">
-        <app-description-input-right ></app-description-input-right>
+        <app-description-input-right (cartItemsUpdatedEvent)="updateCart($event)" [cart]="cart"></app-description-input-right>
       </div>
     </div>
   </div>

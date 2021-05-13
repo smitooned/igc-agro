@@ -13,6 +13,7 @@ import { DescriptionSliderLeftComponent } from './description-slider-left/descri
 import { DescriptionInputRightComponent } from './description-input-right/description-input-right.component';
 import { CartNavigatorComponent } from './cart-navigator/cart-navigator.component';
 import { ConfigureBoxesComponent } from './configure-boxes/configure-boxes.component';
+import { CartBoxesComponent } from './cart-boxes/cart-boxes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ConfigureBoxesComponent } from './configure-boxes/configure-boxes.compo
     DescriptionSliderLeftComponent,
     DescriptionInputRightComponent,
     CartNavigatorComponent,
-    ConfigureBoxesComponent
+    ConfigureBoxesComponent,
+    CartBoxesComponent
   ],
   imports: [
     BrowserModule,
