@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="/home.css">
       <title>Document</title>
    </head>
+
    <body>
       <div class="container">
         <div class="upper">
@@ -21,7 +22,8 @@
           <div class="container">
             <div class="row">
               <div class="col-6 leftSide">
-                <span class="tagLineLanding">Gift a Covid Box to your Loved Ones this Summer</span>
+                <span class="tagLineLanding">Gift a Covid Box to your Loved Ones this Summer</span><hr>
+
                 <div class="switchBtn">
                   <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
                     <img src="../assets/mango.svg" alt=""  data-btn="mangoes">
@@ -46,7 +48,7 @@
           </div>
 
           <div class="orderNowLandingDiv">
-            <button id="orderNowLanding" class="btn" type="button" name="button">Order Gift Box -></button>
+            <button id="orderNowLanding" class="btn" routerLink="/details" type="button" name="button">Order Gift Box -></button>
           </div>
         </div>
 
@@ -54,10 +56,10 @@
 
         <div class="row otherButtons">
           <div class="col-6">
-            <button id="otherButtonA" class="btn" type="button" name="button">Get Mangoes<br>For You</button>
+            <button id="getMangoesBtn" class="btn" (click)="routingBtn($event)" type="button" name="button">Get Mangoes<br>For You</button>
           </div>
           <div class="col-6">
-            <button id="otherButtonB" class="btn" type="button" name="button">Bulk<br>Order</button>
+            <button id="bulkOrderBtn" class="btn" type="button" name="button">Bulk<br>Order</button>
           </div>
         </div>
 

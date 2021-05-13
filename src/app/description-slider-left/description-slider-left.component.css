@@ -16,5 +16,5 @@ transition-duration: 0.5s;
 
 .sliderComponent{
   background-color: white;
-  border: none !important;
+  border-bottom: 1px #DFDFDF solid;
 }

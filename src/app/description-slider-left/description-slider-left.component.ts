@@ -12,6 +12,7 @@ export class DescriptionSliderLeftComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.newItemEvent.emit('selectedBtn');
   }
 
   @Output() newItemEvent = new EventEmitter<string>();
@@ -19,4 +20,6 @@ export class DescriptionSliderLeftComponent implements OnInit {
   switchProduct(event:any) {
     this.newItemEvent.emit(event.target.dataset.btn);
   }
+
+  // localStorage.setItem('selectedBtn');
 }

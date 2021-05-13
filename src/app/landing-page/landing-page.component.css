@@ -6,6 +6,15 @@ body{
   padding: 0%;
 }
 
+.btn:focus{
+    box-shadow:none !important;
+}
+
+.leftSide button:hover{
+border-bottom: 1px solid black;
+transition-duration: 0.5s;
+}
+
 .upper{
   background-color: #FFF7E1;
   padding: 1rem;
@@ -65,14 +74,14 @@ button{
   padding: 1rem;
 }
 
-#otherButtonA{
+#getMangoesBtn{
   width: 90%;
   border: 1px #CCC8BC solid;
   padding: 7px 12px;
   border-radius: 4px;
 }
 
-#otherButtonB{
+#bulkOrderBtn{
   width: 90%;
   border: 1px #CCC8BC solid;
   padding: 7px 12px;

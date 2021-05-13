@@ -9,7 +9,7 @@ body{
 }
 
 .boxHeader{
-    margin: 1rem 0.6rem;
+    margin: 0.5rem 0.5rem;
 }
 
 .detailBox{
@@ -20,7 +20,7 @@ body{
 }
 
 button{
-    margin: 0.5rem !important;
+    margin: 0.5rem 0rem!important;
     border: none !important;
     border-radius: 0.5rem;
 }
@@ -51,13 +51,13 @@ button{
 }
 
 .boxNameContainer {
-  width: 70%;
+  width: 60%;
   text-align: left;
   display: inline-block;
 }
 
 .buttonContainer {
-  width: 30%;
+  width: 40%;
   display: inline-block;
   vertical-align: top;
   text-align: right;

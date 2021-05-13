@@ -50,7 +50,6 @@ export class LandingPageComponent implements OnInit {
   switchDetail(event:any) {
     this.changeDetail(event.target.dataset.btn);
   }
-
   changeDetail(btnType:any){
     if(btnType=='mangoes'){
       this.showDetail=this.mangoes;
@@ -62,5 +61,9 @@ export class LandingPageComponent implements OnInit {
       this.showDetail=this.PMCaresFund;
       console.log("in PMCaresFund");
     }
+  }
+
+  routingBtn(event:any){
+    localStorage.setItem('selectedBtn',event.target.id);
   }
 }

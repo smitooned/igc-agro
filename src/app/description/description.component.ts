@@ -68,14 +68,7 @@ export class DescriptionComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.details.header='Gift a mango box to your loved ones this summer';
-    this.details.imgsrc="../assets/descriptionPhoto.png";
-    this.details.description.header='Box includes :';
-    this.details.description.first='6 Alphonso Mangoes';
-    this.details.description.second.a='Face Shiled';
-    this.details.description.second.b='Mask and Gloves';
-    this.details.description.second.c='Sanitizer';
-    this.details.description.third='100rs donated to PM cares fund';
+    this.details=this.covidBox;
   }
 
   ngOnChanges(changes: any) {
