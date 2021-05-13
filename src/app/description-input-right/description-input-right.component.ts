@@ -12,6 +12,7 @@ export class DescriptionInputRightComponent implements OnInit {
   valueA1=0;
 
   @Output() cartItemsUpdatedEvent = new EventEmitter<object>();
+  @Output() submitCartEvent = new EventEmitter<object>();
 
   @Input() cart: any;
 
@@ -26,5 +27,14 @@ export class DescriptionInputRightComponent implements OnInit {
       productType: productType
     };
     this.cartItemsUpdatedEvent.emit(cartUpdate);
+  }
+
+  submitOrder(event: any, stageComplete: any, message: any) {
+    let stageSubmitted = {
+      event: event,
+      stageComplete: stageComplete,
+      message: message
+    }
+    this.submitCartEvent.emit(stageSubmitted);
   }
 }

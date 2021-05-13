@@ -10,13 +10,13 @@ body{
 
 .boxHeader{
     margin: 1rem 0.6rem;
-    float: right;
 }
 
 .detailBox{
     background-color: #FFFFFF;
     padding: 0.1rem 1rem;
     border-radius: 0.7rem;
+    margin-bottom: 20px;
 }
 
 button{
@@ -48,4 +48,22 @@ button{
     border-radius: 1rem;
     margin: 2rem 0rem;
     padding: 0.6rem 2.1rem;
+}
+
+.boxNameContainer {
+  width: 70%;
+  text-align: left;
+  display: inline-block;
+}
+
+.buttonContainer {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+
+.detailBoxHead {
+  display: inline-block;
+  width: 100%;
 }

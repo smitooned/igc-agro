@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-configure-boxes',
@@ -9,7 +10,15 @@ export class ConfigureBoxesComponent implements OnInit {
 
   constructor() { }
 
+  @Input() cart: any;
+  @Output() boxConfigUpdatedByChild = new EventEmitter<object>();
+
   ngOnInit(): void {
+  }
+
+  handleBoxConfigUpdate(event: any) {
+    console.log(event);
+    this.boxConfigUpdatedByChild.emit(event);
   }
 
 }

@@ -14,6 +14,8 @@ import { DescriptionInputRightComponent } from './description-input-right/descri
 import { CartNavigatorComponent } from './cart-navigator/cart-navigator.component';
 import { ConfigureBoxesComponent } from './configure-boxes/configure-boxes.component';
 import { CartBoxesComponent } from './cart-boxes/cart-boxes.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,13 @@ import { CartBoxesComponent } from './cart-boxes/cart-boxes.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
     {path: 'landing', component: LandingPageComponent},
     {path: 'details', component: DetailsPageComponent}
   ]),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

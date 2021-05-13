@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { startWith } from 'rxjs/operators';
-// import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-details-page',
@@ -27,6 +27,7 @@ export class DetailsPageComponent implements OnInit {
       isVerified: false
     },
     cartStage: {
+      currentStage: 0,
       cartLoaded: false,
       boxesArranged: false,
       shippingConfigured: false,
@@ -37,11 +38,12 @@ export class DetailsPageComponent implements OnInit {
 
   item: any = {
     itemID: '',
+    itemName: '',
     productType: '',
     size: '',
     rxtx: {
       to: '',
-      msg: '',
+      message: '',
       from: ''
     },
     boxArrangement:'',
@@ -63,14 +65,24 @@ export class DetailsPageComponent implements OnInit {
     //console.log("event reached parent", cartUpdate);
     if(parseInt(cartUpdate.countUpdate) > 0) {
       let newItem = this.item;
-      // let newItemUID = uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+      let newItemUID = uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
       newItem.productType = cartUpdate.productType;
       newItem.productSize = cartUpdate.productSize;
-      // newItem.itemID = newItemUID;
-      this.cart.items[cartUpdate.productSize].push(this.item)
+      newItem.itemID = newItemUID;
+      this.cart.items[cartUpdate.productSize].push(newItem);
     } else {
       this.cart.items[cartUpdate.productSize].pop();
     }
+  }
+
+  updateCartStage(submitUpdate:any) {
+    console.log(submitUpdate);
+    this.cart.cartStage.currentStage = parseInt(submitUpdate.stageComplete) + 1;
+  }
+
+  updateBoxConfig(update:any) {
+    this.cart.items[update.productSize][update.indexOfItem].rxtx = update.checkoutVal;
+    console.log(this.cart);
   }
 
 }
