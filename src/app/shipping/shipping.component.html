@@ -1,0 +1,44 @@
+<div *ngIf="cart.items.A1.length > 0">
+    <p>A1 Size Boxes</p>
+
+    <div class="shipping-box-container">
+        <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="shipping-box">
+            <div class="no-form">
+                <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Add Shipping details</div>
+            </div>
+
+            <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize" class="shipping-form-container">
+                <hr>
+                <ng-container [ngTemplateOutlet]="simpleLink" [ngTemplateOutletContext]="{item:item}">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="cart.items.A2.length > 0">
+    <p>A2 Size Boxes</p>
+</div>
+
+<div *ngIf="cart.items.A3.length > 0">
+    <p>A3 Size Boxes</p>
+</div>
+
+<ng-template #simpleLink let-item='item'>
+    <div class="shipping-form">
+        <div class="label">
+            Select Region:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Select the region of delivery">
+        </div>
+
+        <div class="label">
+            Selected Centre:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Select the region of delivery">
+        </div>
+    </div>
+</ng-template>

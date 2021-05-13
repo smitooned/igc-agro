@@ -91,4 +91,9 @@ export class DetailsPageComponent implements OnInit {
   
   }
 
+  updateShippingStage(cart: any){
+    console.log("Updating shipping stage: ", cart, this.cart);
+    this.cart = cart;
+  }
+
 }
