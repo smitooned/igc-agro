@@ -1,6 +1,5 @@
-<button type="button" class="btn btn" data-bs-toggle="button" data-btn="covidBox" (click)="switchProduct($event)" autocomplete="off" style="display: block;">Covid
-  Box</button>
-<button type="button" class="btn btn" data-bs-toggle="button" data-btn="mangoesForYou" (click)="switchProduct($event)" autocomplete="off" style="display: block;">Mangoes
-  for You</button>
-<button type="button" class="btn btn" data-bs-toggle="button" autocomplete="off" style="display: block;">Bulk
-  Orders</button>
+<div class="d-flex justify-content-around sliderComponent">
+  <button type="button" class="btn d-lg-block" data-bs-toggle="button" data-btn="covidBox" (click)="switchProduct($event)" autocomplete="off">Covid Box</button>
+  <button type="button" class="btn d-lg-block" data-bs-toggle="button" data-btn="mangoesForYou" (click)="switchProduct($event)" autocomplete="off">Mangoes<br>for You</button>
+  <button type="button" class="btn d-lg-block" data-bs-toggle="button" data-btn="bulkOrder" (click)="switchProduct($event)" autocomplete="off">Bulk Orders</button>
+</div>

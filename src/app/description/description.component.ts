@@ -26,13 +26,13 @@ export class DescriptionComponent implements OnInit {
 
   covidBox:any= {
       header:'Gift a mango box to your loved ones this summer',
-      imgsrc:'https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80',
+      imgsrc:'../assets/descriptionPhoto.png',
       description:{
         header:'Box includes :',
         first:'6 Alphonso Mangoes',
         second:{
           a:'Face Shield',
-          b:'Mask',
+          b:'Mask and gloves',
           c:'Sanitizer'
         },
         third:'100rs donated to PM cares fund'
@@ -40,7 +40,7 @@ export class DescriptionComponent implements OnInit {
   };
     mangoesForYou:any= {
       header:'Devgad Alphonso MAngoes',
-      imgsrc:'',
+      imgsrc:'../assets/descriptionPhoto.png',
       description:{
         header:'Available in 3 sizes :',
         first:'A1',
@@ -68,13 +68,13 @@ export class DescriptionComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.details.header='Get awesome Mangoes which you will love';
-    this.details.imgsrc="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80";
+    this.details.header='Gift a mango box to your loved ones this summer';
+    this.details.imgsrc="../assets/descriptionPhoto.png";
     this.details.description.header='Box includes :';
     this.details.description.first='6 Alphonso Mangoes';
     this.details.description.second.a='Face Shiled';
-    this.details.description.second.b='Sanitizer';
-    this.details.description.second.c='Mask';
+    this.details.description.second.b='Mask and Gloves';
+    this.details.description.second.c='Sanitizer';
     this.details.description.third='100rs donated to PM cares fund';
   }
 
@@ -89,6 +89,8 @@ export class DescriptionComponent implements OnInit {
       this.details=this.covidBox;
     }else if(btnType=='mangoesForYou'){
       this.details=this.mangoesForYou;
+    }else if(btnType=='bulkOrder'){
+      this.details=this.bulkOrder;
     }
   }
 }
