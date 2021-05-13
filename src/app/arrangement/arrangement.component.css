@@ -1,0 +1,37 @@
+.arrangement-box-container{
+    
+}
+
+.arrangement-box{
+    box-shadow: 0px 3px 6px #00000014;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.box-arrangement-type-container{
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.box-arrangement-type{
+    border: 1px solid #F29722;
+    background-color: white;
+    width: 33.33%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+
+    color: #F29722;
+}
+
+.box-arrangement-type-container .active{
+    color: white;
+    background-color: #F29722;
+}

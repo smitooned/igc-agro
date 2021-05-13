@@ -16,6 +16,7 @@ import { ConfigureBoxesComponent } from './configure-boxes/configure-boxes.compo
 import { CartBoxesComponent } from './cart-boxes/cart-boxes.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ArrangementComponent } from './arrangement/arrangement.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DescriptionInputRightComponent,
     CartNavigatorComponent,
     ConfigureBoxesComponent,
-    CartBoxesComponent
+    CartBoxesComponent,
+    ArrangementComponent
   ],
   imports: [
     BrowserModule,

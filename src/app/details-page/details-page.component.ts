@@ -46,7 +46,7 @@ export class DetailsPageComponent implements OnInit {
       message: '',
       from: ''
     },
-    boxArrangement:'',
+    boxArrangement:'Raw',
     shippingDetails: {
       region: '',
       nearestCentre: '',
@@ -62,9 +62,9 @@ export class DetailsPageComponent implements OnInit {
   }
 
   updateCart(cartUpdate:any) {
-    //console.log("event reached parent", cartUpdate);
+    // console.log("event reached parent", cartUpdate);
     if(parseInt(cartUpdate.countUpdate) > 0) {
-      let newItem = this.item;
+      let newItem = Object.assign({},this.item);
       let newItemUID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
       newItem.productType = cartUpdate.productType;
       newItem.productSize = cartUpdate.productSize;
@@ -76,13 +76,19 @@ export class DetailsPageComponent implements OnInit {
   }
 
   updateCartStage(submitUpdate:any) {
-    console.log(submitUpdate);
-    this.cart.cartStage.currentStage = parseInt(submitUpdate.stageComplete) + 1;
+    console.log("Update cart stage: ",submitUpdate);
+    this.cart.cartStage.currentStage = parseInt(this.cart.cartStage.currentStage) + 1;
   }
 
   updateBoxConfig(update:any) {
     this.cart.items[update.productSize][update.indexOfItem].rxtx = update.checkoutVal;
     console.log(this.cart);
+  }
+
+  updateArrangementStage(cart: any){
+    console.log("Updating cart stage: ", cart, this.cart);
+    this.cart = cart;
+  
   }
 
 }
