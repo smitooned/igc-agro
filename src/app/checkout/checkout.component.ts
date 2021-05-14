@@ -11,9 +11,9 @@ export class CheckoutComponent implements OnInit {
   selectedProductSize: any = '';
   selectedProductIndex: any = -1;
 
-  priceA1: any = 500;
-  priceA2: any = 600;
-  priceA3: any = 700;
+  priceA1: any = 499;
+  priceA2: any = 599;
+  priceA3: any = 699;
 
   totalA1Cost: any = 0;
   totalA2Cost: any = 0;
@@ -22,6 +22,7 @@ export class CheckoutComponent implements OnInit {
   totalCost: any = 0;
 
   @Input() cart: any;
+  @Input() priceList: any;
   @Output() upadteCheckoutStage = new EventEmitter<object>();
 
   constructor() { }

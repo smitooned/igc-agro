@@ -9,9 +9,38 @@ import { Input } from '@angular/core';
 export class EndScreenComponent implements OnInit {
 
   constructor() { }
+
   @Input() cart: any;
+  orderText: any;
 
   ngOnInit(): void {
+  }
+
+  buildOrder() {
+    this.orderText = `
+    Order ID: *${this.cart.orderID}*
+
+    `;
+
+    this.cart.map((item:any) => {
+      let dummy = String.fromCharCode(10);
+      this.orderText += `
+        *${item.rxtx.to}'s* ${item.productType}${dummy}
+        Personal Note: ${item.rxtx.message}${dummy}
+        From: ${item.rxtx.from}${dummy}
+        ${item.shippingDetails.apartment}, ${item.shippingDetails.location}${dummy}
+        Pincode: ${item.shippingDetails.pincode}${dummy}
+        Nearest Landmark: ${item.shippingDetails.landmark}${dummy}
+        Box Arrangment: ${item.boxArrangement}${dummy}
+    `
+    })
+    console.log(this.orderText);
+
+    let res = encodeURI(this.orderText);
+
+    //send on whatsapp
+    var win = window.open(`https://wa.me/${+918050027648}?text=${res}`, '_blank');
+
   }
 
 }

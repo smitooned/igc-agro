@@ -33,8 +33,8 @@
         <app-configure-boxes *ngSwitchCase="1" [cart]="cart" (boxConfigUpdatedByChild)="updateBoxConfig($event)"></app-configure-boxes>
         <app-arrangement *ngSwitchCase="2" [cart]="cart" (updateArrangementStage)="updateArrangementStage($event)"></app-arrangement>
         <app-shipping *ngSwitchCase="3" [cart]="cart" (updateShippingStage)="updateShippingStage($event)"></app-shipping>
-        <app-checkout *ngSwitchCase="4" [cart]="cart" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
-        <app-checkout *ngSwitchCase="5" [cart]="cart" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
+        <app-checkout *ngSwitchCase="4" [cart]="cart" [priceList]="priceList" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
+        <app-checkout *ngSwitchCase="5" [cart]="cart" [priceList]="priceList" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
         <app-end-screen *ngSwitchCase="6" [cart]="cart"></app-end-screen>
       </div>
 

@@ -53,10 +53,18 @@ export class DetailsPageComponent implements OnInit {
     shippingDetails: {
       region: '',
       nearestCentre: '',
-      location: '',
-      apartment: '',
+      location: '', //address
+      apartment: '', // apartment
       landmark: '',
       pincode: ''
+    }
+  }
+
+  priceList: any = {
+    COVIDBox: {
+      A1: 499,
+      A2: 599,
+      A3: 699
     }
   }
 
