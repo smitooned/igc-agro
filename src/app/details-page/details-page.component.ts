@@ -37,6 +37,9 @@ export class DetailsPageComponent implements OnInit {
       whatsappVerified: false
     }
   }
+  products: {
+    
+  }
 
   item: any = {
     itemID: '',
