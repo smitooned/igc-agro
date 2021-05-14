@@ -21,8 +21,9 @@
         <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="-1"></app-description-slider-left>
         <!-- <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="0"></app-description-slider-left> -->
         <app-cart-navigator *ngSwitchCase="1" [cart]="cart"></app-cart-navigator>
-        <app-cart-navigator *ngSwitchCase="2"></app-cart-navigator>
-        <app-cart-navigator *ngSwitchCase="3"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="2" [cart]="cart"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="3" [cart]="cart"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="4" [cart]="cart"></app-cart-navigator>
       </div>
 
       <!-- main canvas: center -->

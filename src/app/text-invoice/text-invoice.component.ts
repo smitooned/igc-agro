@@ -10,8 +10,16 @@ export class TextInvoiceComponent implements OnInit {
 
   constructor() { }
   @Input() cart: any;
+  orderText: any;
 
   ngOnInit(): void {
   }
+  buildOrder() {
+    this.orderText = `
+    Order ID: $cart.orderID
 
+    {{item.rxtx.to}}'s {{item.productType}}
+    `;
+    console.log(this.orderText);
+  }
 }
