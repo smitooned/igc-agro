@@ -1,0 +1,24 @@
+.configureboxes{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 0.3rem;
+}
+
+.A1SizeBoxes{
+    background-color: #F0D18F6E;
+    padding: 1rem 0.3rem;
+    border-radius: 1rem;
+}
+
+.A2SizeBoxes{
+    background-color: #F0D18F6E;
+    padding: 1rem 0.3rem;
+    border-radius: 1rem;
+}
+
+.A3SizeBoxes{
+    background-color: #F0D18F6E;
+    padding: 1rem 0.3rem;
+    border-radius: 1rem;
+}

@@ -17,6 +17,12 @@ button:hover{
 .sliderComponent{
   background-color: white;
   border-bottom: 1px #DFDFDF solid;
+  padding: 0.5rem;
+}
+
+img{
+  width: 10%;
+  height: auto;
 }
 
 .ourProducts{

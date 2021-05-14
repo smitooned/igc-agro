@@ -14,7 +14,6 @@ body{
 
 .detailBox{
     background-color: #FFFFFF;
-    padding: 0.1rem 1rem;
     border-radius: 0.7rem;
     margin-bottom: 10px;
 }
@@ -66,4 +65,8 @@ button{
 .detailBoxHead {
   display: inline-block;
   width: 100%;
+}
+
+.cartForm{
+    margin: 0.5rem;
 }
