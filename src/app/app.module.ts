@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArrangementComponent } from './arrangement/arrangement.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { TextInvoiceComponent } from './text-invoice/text-invoice.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TextInvoiceComponent } from './text-invoice/text-invoice.component';
     CartBoxesComponent,
     ArrangementComponent,
     ShippingComponent,
-    TextInvoiceComponent
+    TextInvoiceComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

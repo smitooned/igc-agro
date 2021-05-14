@@ -99,4 +99,9 @@ export class DetailsPageComponent implements OnInit {
     this.cart = cart;
   }
 
+  updateCheckoutStage(cart: any){
+    console.log("Updating Checkout stage: ", cart, this.cart);
+    this.cart = cart;
+  }
+
 }

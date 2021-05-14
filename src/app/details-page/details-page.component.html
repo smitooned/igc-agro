@@ -23,6 +23,8 @@
         <app-cart-navigator *ngSwitchCase="1" [cart]="cart"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="2"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="3"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="4"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="5"></app-cart-navigator>
       </div>
 
       <!-- main canvas: center -->
@@ -31,6 +33,8 @@
         <app-configure-boxes *ngSwitchCase="1" [cart]="cart" (boxConfigUpdatedByChild)="updateBoxConfig($event)"></app-configure-boxes>
         <app-arrangement *ngSwitchCase="2" [cart]="cart" (updateArrangementStage)="updateArrangementStage($event)"></app-arrangement>
         <app-shipping *ngSwitchCase="3" [cart]="cart" (updateShippingStage)="updateShippingStage($event)"></app-shipping>
+        <app-checkout *ngSwitchCase="4" [cart]="cart" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
+        <app-checkout *ngSwitchCase="5" [cart]="cart" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
       </div>
 
       <!-- right panel -->
