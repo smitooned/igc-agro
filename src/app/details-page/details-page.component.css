@@ -8,6 +8,10 @@
   overflow: scroll ;
 }
 
+.inputDiv{
+  margin-bottom: 0.4rem;
+}
+
 .btn:focus{
     box-shadow:none !important;
 }

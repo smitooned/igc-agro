@@ -39,7 +39,7 @@
       </div>
 
       <!-- right panel -->
-      <div class="col-lg-3 ">
+      <div class="col-lg-3 inputDiv">
         <app-description-input-right (cartItemsUpdatedEvent)="updateCart($event)" (submitCartEvent)="updateCartStage($event)" [cart]="cart"></app-description-input-right>
         <app-text-invoice [cart]="cart"></app-text-invoice>
       </div>
