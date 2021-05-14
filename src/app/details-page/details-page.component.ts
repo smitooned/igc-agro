@@ -11,6 +11,7 @@ export class DetailsPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.cart.orderID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
   }
 
   selectedBtn='';
@@ -27,7 +28,8 @@ export class DetailsPageComponent implements OnInit {
       isVerified: false
     },
     cartStage: {
-      currentStage: 0,
+      currentStage: -1,
+      productSelected: false,
       cartLoaded: false,
       boxesArranged: false,
       shippingConfigured: false,
@@ -40,6 +42,7 @@ export class DetailsPageComponent implements OnInit {
     itemID: '',
     itemName: '',
     productType: '',
+    productCost:'',
     size: '',
     rxtx: {
       to: '',
@@ -88,7 +91,12 @@ export class DetailsPageComponent implements OnInit {
   updateArrangementStage(cart: any){
     console.log("Updating cart stage: ", cart, this.cart);
     this.cart = cart;
-  
+
+  }
+
+  updateShippingStage(cart: any){
+    console.log("Updating shipping stage: ", cart, this.cart);
+    this.cart = cart;
   }
 
 }
