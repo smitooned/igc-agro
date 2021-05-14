@@ -1,43 +1,46 @@
-<p id="orderSummaryHeader">Order summary</p>
-<div class="summaryBox">
-  <span>A1</span>
-  <div class="d-flex justify-content-between">
-    <span><b>Rs 500</b>/box</span>
-    <div class="ms-auto countBtn">
-      <button type="button" name="button" (click)="updateCart($event,-1,'A1', 'COVID Box')">-</button>
-      <span id="count">{{cart.items.A1.length}}</span>
-      <button type="button" name="button" (click)="updateCart($event,1,'A1', 'COVID Box')">+</button>
+<ng-template [ngIf]="cart.cartStage.currentStage == 0">
+  <p id="orderSummaryHeader">Order summary</p>
+  <div class="summaryBox">
+    <span>A1</span>
+    <div class="d-flex justify-content-between">
+      <span><b>Rs 500</b>/box</span>
+      <div class="ms-auto countBtn">
+        <button type="button" name="button" (click)="updateCart($event,-1,'A1', 'COVID Box')">-</button>
+        <span id="count">{{cart.items.A1.length}}</span>
+        <button type="button" name="button" (click)="updateCart($event,1,'A1', 'COVID Box')">+</button>
+      </div>
     </div>
   </div>
-</div>
-<br>
+  <br>
 
-<div class="summaryBox">
-  <span>A2</span>
-  <div class="d-flex justify-content-between">
-    <span><b>Rs 500</b>/box</span>
-    <div class="ms-auto countBtn">
-      <button type="button" name="button" (click)="updateCart($event, -1, 'A2', 'COVID Box')">-</button>
-      <span id="count">{{cart.items.A2.length}}</span>
-      <button type="button" name="button" (click)="updateCart($event, 1, 'A2', 'COVID Box')">+</button>
+  <div class="summaryBox">
+    <span>A2</span>
+    <div class="d-flex justify-content-between">
+      <span><b>Rs 500</b>/box</span>
+      <div class="ms-auto countBtn">
+        <button type="button" name="button" (click)="updateCart($event, -1, 'A2', 'COVID Box')">-</button>
+        <span id="count">{{cart.items.A2.length}}</span>
+        <button type="button" name="button" (click)="updateCart($event, 1, 'A2', 'COVID Box')">+</button>
+      </div>
     </div>
   </div>
-</div>
-<br>
+  <br>
 
-<div class="summaryBox">
-<span>A3</span>
-  <div class="d-flex justify-content-between">
-    <span><b>Rs 500</b>/box</span>
-    <div class="ms-auto countBtn">
-      <button type="button" name="button" (click)="updateCart($event, -1, 'A3', 'COVID Box')">-</button>
-      <span id="count">{{cart.items.A3.length}}</span>
-      <button type="button" name="button" (click)="updateCart($event, 1, 'A3', 'COVID Box')">+</button>
+  <div class="summaryBox">
+  <span>A3</span>
+    <div class="d-flex justify-content-between">
+      <span><b>Rs 500</b>/box</span>
+      <div class="ms-auto countBtn">
+        <button type="button" name="button" (click)="updateCart($event, -1, 'A3', 'COVID Box')">-</button>
+        <span id="count">{{cart.items.A3.length}}</span>
+        <button type="button" name="button" (click)="updateCart($event, 1, 'A3', 'COVID Box')">+</button>
+      </div>
     </div>
   </div>
-</div>
-<br>
-<br>
-
+  <br>
+  <br>
+</ng-template>
 <!-- order Now button -->
-<button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" >Order Now </button>
+<div class="col-md-12" class="orderNowBtnContainer">
+  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" >Order Now </button>
+</div>

@@ -18,17 +18,21 @@
     <div class="row">
       <!-- left panel -->
       <div class="col-lg-3 d-flex flex-column align-items-start-center justify-content-center sliderDiv" [ngSwitch]="cart.cartStage.currentStage">
+        <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="-1"></app-description-slider-left>
         <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="0"></app-description-slider-left>
-        <app-cart-navigator *ngSwitchCase="1"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="1" [cart]="cart"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="2"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="3"></app-cart-navigator>
       </div>
+
       <!-- main canvas: center -->
       <div class="col-lg-6 descriptionDiv" [ngSwitch]="cart.cartStage.currentStage">
-        <app-description [btnType]="selectedBtn" *ngSwitchCase="0" ></app-description>
+        <app-description [btnType]="selectedBtn" *ngSwitchCase="-1" ></app-description>
         <app-configure-boxes *ngSwitchCase="1" [cart]="cart" (boxConfigUpdatedByChild)="updateBoxConfig($event)"></app-configure-boxes>
         <app-arrangement *ngSwitchCase="2" [cart]="cart" (updateArrangementStage)="updateArrangementStage($event)"></app-arrangement>
         <app-shipping *ngSwitchCase="3" [cart]="cart" (updateShippingStage)="updateShippingStage($event)"></app-shipping>
       </div>
+
       <!-- right panel -->
       <div class="col-lg-3 ">
         <app-description-input-right (cartItemsUpdatedEvent)="updateCart($event)" (submitCartEvent)="updateCartStage($event)" [cart]="cart"></app-description-input-right>

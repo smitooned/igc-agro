@@ -27,7 +27,8 @@ export class DetailsPageComponent implements OnInit {
       isVerified: false
     },
     cartStage: {
-      currentStage: 0,
+      currentStage: -1,
+      productSelected: false,
       cartLoaded: false,
       boxesArranged: false,
       shippingConfigured: false,
@@ -88,7 +89,7 @@ export class DetailsPageComponent implements OnInit {
   updateArrangementStage(cart: any){
     console.log("Updating cart stage: ", cart, this.cart);
     this.cart = cart;
-  
+
   }
 
   updateShippingStage(cart: any){
