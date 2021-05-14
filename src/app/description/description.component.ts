@@ -35,15 +35,15 @@ export class DescriptionComponent implements OnInit {
           b:'Mask and gloves',
           c:'Sanitizer'
         },
-        third:'100rs donated to PM cares fund'
+        third:'Rs 100/- donated to PM cares fund'
       }
   };
     mangoesForYou:any= {
-      header:'Devgad Alphonso MAngoes',
-      imgsrc:'../assets/descriptionPhoto.png',
+      header:'Coming Soon...',
+      imgsrc:'',
       description:{
-        header:'Available in 3 sizes :',
-        first:'A1',
+        header:'',
+        first:'',
         second:{
           a:'',
           b:'',
@@ -53,7 +53,7 @@ export class DescriptionComponent implements OnInit {
       }
   };
     bulkOrder:any= {
-      header:'',
+      header:'Coing Soon...',
       imgsrc:'',
       description:{
         header:'',

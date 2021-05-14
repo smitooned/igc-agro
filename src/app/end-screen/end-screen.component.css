@@ -1,0 +1,33 @@
+.finalOrder{
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.finalOrderDescription{
+    text-align: center;
+    margin: 1rem;
+
+}
+
+.shareOrderDiv{
+    text-align: center;
+}
+
+.orderNowBtnContainer {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.orderNowBtn{
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 80%;
+    height: auto;
+    border-radius: 1.3rem !important;
+    color: white;
+    padding: 0.5rem !important;
+    background-color: green;
+}

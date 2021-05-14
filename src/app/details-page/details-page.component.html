@@ -19,7 +19,7 @@
       <!-- left panel -->
       <div class="col-lg-3 d-flex flex-column align-items-start-center justify-content-center sliderDiv" [ngSwitch]="cart.cartStage.currentStage">
         <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="-1"></app-description-slider-left>
-        <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="0"></app-description-slider-left>
+        <!-- <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="0"></app-description-slider-left> -->
         <app-cart-navigator *ngSwitchCase="1" [cart]="cart"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="2"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="3"></app-cart-navigator>

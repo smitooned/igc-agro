@@ -45,9 +45,9 @@ export class DetailsPageComponent implements OnInit {
     productCost:'',
     size: '',
     rxtx: {
-      to: '',
-      message: '',
-      from: ''
+      to: null,
+      message: null,
+      from: null
     },
     boxArrangement:'Raw',
     shippingDetails: {

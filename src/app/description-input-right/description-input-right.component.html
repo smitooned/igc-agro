@@ -1,7 +1,37 @@
 <ng-template [ngIf]="cart.cartStage.currentStage == 0">
-  <p id="orderSummaryHeader">Order summary</p>
+  
+  <div>
+    <p id="orderSummaryHeader">Types of Mangoes</p>
+  </div>
+  <div class="row types">
+    <div class="col-4 typeA1">
+      <span class="typeName">A1</span>
+      <br>
+      <span style="font-size: 1.2rem;">Small</span>
+      <br>
+      <span><b>6 x 4</b> inch</span>
+    </div>
+
+    <div class="col-4 typeA2">
+      <span class="typeName">A2</span>
+      <br>
+      <span style="font-size: 1.2rem;">Medium</span>
+      <br>
+      <span><b>7 x 4.5</b> inch</span>
+    </div>
+    
+    <div class="col-4 typeA3">
+      <span class="typeName">A3</span>
+      <br>
+      <span style="font-size: 1.2rem;">Large</span>
+      <br>
+      <span><b>8 x 5</b> inch</span>
+    </div>
+  </div>
+  
+  <p id="orderSummaryHeader">Select Your Boxes</p>
   <div class="summaryBox">
-    <span>A1</span>
+    <span class="typeOfSection">Covid Box size A1</span>
     <div class="d-flex justify-content-between">
       <span><b>Rs 500</b>/box</span>
       <div class="ms-auto countBtn">
@@ -11,10 +41,9 @@
       </div>
     </div>
   </div>
-  <br>
 
   <div class="summaryBox">
-    <span>A2</span>
+    <span class="typeOfSection">Covid Box size A2</span>
     <div class="d-flex justify-content-between">
       <span><b>Rs 500</b>/box</span>
       <div class="ms-auto countBtn">
@@ -24,10 +53,9 @@
       </div>
     </div>
   </div>
-  <br>
 
   <div class="summaryBox">
-  <span>A3</span>
+  <span class="typeOfSection">Covid Box size A3</span>
     <div class="d-flex justify-content-between">
       <span><b>Rs 500</b>/box</span>
       <div class="ms-auto countBtn">

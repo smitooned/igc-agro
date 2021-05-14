@@ -28,6 +28,7 @@ button{
     background-color: #FFFFFF;
     border: 2px #F29722 !important;
     color: #F29722;
+    margin: 0rem !important;
 }
 
 .submitter{
@@ -69,4 +70,8 @@ button{
 
 .cartForm{
     margin: 0.5rem;
+}
+
+.btn:focus{
+    box-shadow:none !important;
 }
