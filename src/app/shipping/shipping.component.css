@@ -7,7 +7,7 @@
     background-color: white;
     border-radius: 10px;
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 0.3rem;
 }
 
 .shipping-box-container .shipping-box .box-name {
@@ -22,7 +22,6 @@
     width: 50%;
     align-items: center;
     text-align: center;
-    border: 1px solid #f29722;
     color: #f29722;
     margin-right: 15px;
     justify-content: center;
@@ -37,7 +36,7 @@
 
 .shipping-form .button-container{
     display: flex;
-    place-content: center;    
+    place-content: center;
 }
 
 .discard-button, .save-button{

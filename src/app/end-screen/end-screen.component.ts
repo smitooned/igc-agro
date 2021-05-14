@@ -19,19 +19,20 @@ export class EndScreenComponent implements OnInit {
   buildOrder() {
     this.orderText = `
     Order ID: *${this.cart.orderID}*
-
     `;
-
-    this.cart.map((item:any) => {
+    
+    this.cart.items.A1.map((item:any) => {
       let dummy = String.fromCharCode(10);
       this.orderText += `
         *${item.rxtx.to}'s* ${item.productType}${dummy}
-        Personal Note: ${item.rxtx.message}${dummy}
-        From: ${item.rxtx.from}${dummy}
-        ${item.shippingDetails.apartment}, ${item.shippingDetails.location}${dummy}
-        Pincode: ${item.shippingDetails.pincode}${dummy}
-        Nearest Landmark: ${item.shippingDetails.landmark}${dummy}
-        Box Arrangment: ${item.boxArrangement}${dummy}
+        *Personal Note:* ${item.rxtx.message}${dummy}
+        *From:* ${item.rxtx.from}${dummy}
+        *Size:* ${item.productSize}${dummy}
+        *Box Arrangment:* ${item.boxArrangement}${dummy}
+        *Address:* ${item.shippingDetails.apartment}, ${item.shippingDetails.location}${dummy}
+        *Pincode:* ${item.shippingDetails.pincode}${dummy}
+        *Nearest Landmark:* ${item.shippingDetails.landmark}${dummy}
+        *Cost:* ${item.productCost}
     `
     })
     console.log(this.orderText);
