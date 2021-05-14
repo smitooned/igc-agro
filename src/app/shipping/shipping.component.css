@@ -49,6 +49,17 @@
     padding-top: 3px;
     margin-right: 15px;
     margin-top: 10px;
+    border-radius: 10px;
+}
+
+.discard-button{
+    color: #f29722;
+    border: 1px solid #f29722;
+}
+
+.save-button{
+    color: white;
+    background-color: #f29722;
 }
 
 .shipping-form-input{
