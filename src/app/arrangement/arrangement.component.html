@@ -1,4 +1,4 @@
-<div *ngIf="cart.items.A1.length > 0">
+<div class="A1SizeBoxes" *ngIf="cart.items.A1.length > 0">
     <p>A1 Size Boxes</p>
     <div class="arrangement-box-container">
         <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="arrangement-box">
@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<div *ngIf="cart.items.A2.length > 0">
+<div class="A2SizeBoxes" *ngIf="cart.items.A2.length > 0">
     <p>A2 Size Boxes</p>
     <div class="arrangement-box-container">
         <div *ngFor="let item of cart.items.A2; let i = index" [attr.data-index]="i" class="arrangement-box">
@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<div *ngIf="cart.items.A3.length > 0">
+<div class="A3SizeBoxes" *ngIf="cart.items.A3.length > 0">
     <p>A3 Size Boxes</p>
     <div class="arrangement-box-container">
         <div *ngFor="let item of cart.items.A3; let i = index" [attr.data-index]="i" class="arrangement-box">

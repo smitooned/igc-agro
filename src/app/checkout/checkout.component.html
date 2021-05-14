@@ -1,7 +1,6 @@
 <div *ngIf="cart.cartStage.currentStage == 4" class="review-order-container">
-    <div *ngIf="cart.items.A1.length > 0">
+    <div class="A1SizeBoxes" *ngIf="cart.items.A1.length > 0">
         <p>A1 Size Boxes</p>
-    
         <div class="shipping-box-container">
             <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="shipping-box">
                 <div class="no-form">
@@ -20,9 +19,8 @@
         </div>
     </div>
     
-    <div *ngIf="cart.items.A2.length > 0">
+    <div class="A2SizeBoxes" *ngIf="cart.items.A2.length > 0">
         <p>A2 Size Boxes</p>
-    
         <div class="shipping-box-container">
             <div *ngFor="let item of cart.items.A2; let i = index" [attr.data-index]="i" class="shipping-box">
                 <div class="no-form">
@@ -41,9 +39,8 @@
         </div>
     </div>
     
-    <div *ngIf="cart.items.A3.length > 0">
+    <div class="A3SizeBoxes" *ngIf="cart.items.A3.length > 0">
         <p>A3 Size Boxes</p>
-    
         <div class="shipping-box-container">
             <div *ngFor="let item of cart.items.A3; let i = index" [attr.data-index]="i" class="shipping-box">
                 <div class="no-form">
@@ -64,9 +61,7 @@
 </div>
 
 <div *ngIf="cart.cartStage.currentStage == 5" class="confirm-order-container">
-    <div *ngIf="cart.items.A1.length > 0">
-        
-    
+    <div class="A1SizeBoxes" *ngIf="cart.items.A1.length > 0">
         <div class="confirm-row">
             <div class="name">
                 {{cart.items.A1.productType}} A1 Size<br>
@@ -78,9 +73,7 @@
         </div>
     </div>
     
-    <div *ngIf="cart.items.A2.length > 0">
-        
-    
+    <div class="A2SizeBoxes" *ngIf="cart.items.A2.length > 0">
         <div class="confirm-row">
             <div class="name">
                 {{cart.items.A2.productType}} A2 Size<br>
@@ -92,9 +85,7 @@
         </div>
     </div>
     
-    <div *ngIf="cart.items.A3.length > 0">
-        
-    
+    <div class="A3SizeBoxes" *ngIf="cart.items.A3.length > 0">   
         <div class="confirm-row">
             <div class="name">
                 {{cart.items.A3.productType}} A3 Size<br>
@@ -108,7 +99,7 @@
 
     <hr>
 
-    <div class="confirm-row">
+    <div class="confirm-row A1SizeBoxes">
         <div class="name">
             Total cost
         </div>

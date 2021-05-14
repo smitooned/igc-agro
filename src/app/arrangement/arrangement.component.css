@@ -31,3 +31,28 @@
     color: white;
     background-color: #F29722;
 }
+
+p{
+    text-align: center;
+}
+
+.A1SizeBoxes{
+    background-color: #F0D18F6E;
+    padding: 1rem 0.3rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+}
+
+.A2SizeBoxes{
+    background-color: #F0D18F6E;
+    padding: 1rem 0.3rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+}
+
+.A3SizeBoxes{
+    background-color: #F0D18F6E;
+    padding: 1rem 0.3rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+}

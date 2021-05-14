@@ -4,6 +4,8 @@
 
 .descriptionDiv{
   margin: 0.3rem 0rem;
+  max-height: 80%;
+  overflow: scroll ;
 }
 
 .btn:focus{
