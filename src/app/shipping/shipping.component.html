@@ -5,12 +5,14 @@
         <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="shipping-box">
             <div class="no-form">
                 <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
-                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Add Shipping details</div>
+                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Add Shipping details
+                </div>
             </div>
 
-            <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize" class="shipping-form-container">
+            <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
+                class="shipping-form-container">
                 <hr>
-                <ng-container [ngTemplateOutlet]="simpleLink" [ngTemplateOutletContext]="{item:item}">
+                <ng-container [ngTemplateOutlet]="simpleLink" [ngTemplateOutletContext]="{item:item, index: i}">
                 </ng-container>
             </div>
         </div>
@@ -19,26 +21,85 @@
 
 <div *ngIf="cart.items.A2.length > 0">
     <p>A2 Size Boxes</p>
+
+    <div class="shipping-box-container">
+        <div *ngFor="let item of cart.items.A2; let i = index" [attr.data-index]="i" class="shipping-box">
+            <div class="no-form">
+                <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Add Shipping details
+                </div>
+            </div>
+
+            <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
+                class="shipping-form-container">
+                <hr>
+                <ng-container [ngTemplateOutlet]="simpleLink" [ngTemplateOutletContext]="{item:item, index: i}">
+                </ng-container>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div *ngIf="cart.items.A3.length > 0">
     <p>A3 Size Boxes</p>
+
+    <div class="shipping-box-container">
+        <div *ngFor="let item of cart.items.A3; let i = index" [attr.data-index]="i" class="shipping-box">
+            <div class="no-form">
+                <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Add Shipping details
+                </div>
+            </div>
+
+            <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
+                class="shipping-form-container">
+                <hr>
+                <ng-container [ngTemplateOutlet]="simpleLink" [ngTemplateOutletContext]="{item:item, index: i}">
+                </ng-container>
+            </div>
+        </div>
+    </div>
 </div>
 
-<ng-template #simpleLink let-item='item'>
+<ng-template #simpleLink let-item='item' let-index='index'>
     <div class="shipping-form">
-        <div class="label">
-            Select Region:-
-        </div>
-        <div class="input-box">
-            <input placeholder="Select the region of delivery">
+        <div class="shipping-form-input">
+            <div class="label">
+                Address:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Select the region of delivery" [(ngModel)]="shippingDetails.location">
+            </div>
+
+            <div class="label">
+                Enter Block Number:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter address" [(ngModel)]="shippingDetails.apartment">
+            </div>
+
+            <div class="label">
+                Enter Pincode:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter pincode" [(ngModel)]="shippingDetails.pincode">
+            </div>
+
+            <div class="label">
+                Enter Nearest Landmark:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter nearest landmark" [(ngModel)]="shippingDetails.location">
+            </div>
         </div>
 
-        <div class="label">
-            Selected Centre:-
-        </div>
-        <div class="input-box">
-            <input placeholder="Select the region of delivery">
+        <div class="button-container">
+            <div class="discard-button" (click)="discardButtonAction(item.productSize, index)">
+                Discard
+            </div>
+            <div class="save-button" (click)="saveButtonAction(item.productSize, index)">
+                Save
+            </div>
         </div>
     </div>
 </ng-template>
