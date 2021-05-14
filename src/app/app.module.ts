@@ -18,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArrangementComponent } from './arrangement/arrangement.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { TextInvoiceComponent } from './text-invoice/text-invoice.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ConfigureBoxesComponent,
     CartBoxesComponent,
     ArrangementComponent,
-    ShippingComponent
+    ShippingComponent,
+    TextInvoiceComponent
   ],
   imports: [
     BrowserModule,
