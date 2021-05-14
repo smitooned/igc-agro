@@ -20,6 +20,7 @@ import { ArrangementComponent } from './arrangement/arrangement.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { TextInvoiceComponent } from './text-invoice/text-invoice.component';
 import { EndScreenComponent } from './end-screen/end-screen.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EndScreenComponent } from './end-screen/end-screen.component';
     ArrangementComponent,
     ShippingComponent,
     TextInvoiceComponent,
-    EndScreenComponent
+    EndScreenComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

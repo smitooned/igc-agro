@@ -1,4 +1,8 @@
-.shipping-box-container .shipping-box .no-form {
+.review-order-container{
+
+}
+
+.review-order-container .shipping-box .no-form {
     display: flex;
 }
 
@@ -10,7 +14,7 @@
     padding: 15px;
 }
 
-.shipping-box-container .shipping-box .box-name {
+.review-order-container .shipping-box .box-name {
     display: inline-block;
     margin: auto 0;
     width: 50%;
@@ -65,4 +69,23 @@
 .shipping-form-input{
     max-height: 45vh;
     overflow-y: scroll;
+}
+
+.label-value{
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.confirm-row{
+    margin-bottom: 15px;
+}
+
+.confirm-row .name{
+    display: inline-block;
+}
+
+.confirm-row .price{
+    float: right;
+    margin-right: 15px;
 }
