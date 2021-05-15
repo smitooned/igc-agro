@@ -52,7 +52,7 @@ Unit Price: Rs ${unitPrice}/-
 Total: *Rs ${this.cartCost[size]}*${dummy}
 Box(s):-
         `
-        
+
         this.cart.items[size].map((item:any, index:any) => {
           this.orderText += `
 ${index+1})*To:* ${item.rxtx.to}*
@@ -64,6 +64,9 @@ ${index+1})*To:* ${item.rxtx.to}*
     *Nearest Landmark:* ${item.shippingDetails.landmark}${dummy}
         `
         })
+        this.orderText +=`
+--------------
+`
       }
     })
 
