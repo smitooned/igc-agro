@@ -46,7 +46,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-    {path: 'landing', component: LandingPageComponent},
+    // {path: 'landing', component: LandingPageComponent},
+    {path: '', component: LandingPageComponent},
     {path: 'details', component: DetailsPageComponent}
   ]),
     NgbModule,

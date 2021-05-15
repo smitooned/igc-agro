@@ -47,7 +47,7 @@ Order ID:
 --------------
 COVID WARRIOR KIT
 Size: ${size}
-Qty: ${this.cart.items.A1.length}
+Qty: ${this.cart.items[size].length}
 Unit Price: Rs ${unitPrice}/-
 Total: *Rs ${this.cartCost[size]}*${dummy}
 Box(s):-
@@ -55,7 +55,7 @@ Box(s):-
 
         this.cart.items[size].map((item:any, index:any) => {
           this.orderText += `
-${index+1})*To:* ${item.rxtx.to}*
+${index+1})*To:* ${item.rxtx.to}
     *Personal Note:* ${item.rxtx.message}
     *From:* ${item.rxtx.from}
     *Box Arrangment:* ${item.boxArrangement}
