@@ -38,9 +38,22 @@
         <div *ngFor="let item of cart.items.A2; let i = index" [attr.data-index]="i" class="shipping-box">
             <div class="no-form">
                 <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
-                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Shipping details
+                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)" *ngIf="!isFormComplete">Add Shipping details
                 </div>
             </div>
+
+            <div class="configuredFormControl" *ngIf="isFormComplete">
+              <div class="configuredBadge">
+                <img id="configuredBadgeLogo" src="../assets/formConfigured.svg">
+                <span class="configuredText">Configured</span>
+              </div>
+              <div
+                 class="shipping-details-button-edit"
+                 type="button"
+                 (click)="expandForm(item.productSize, i)">
+                 Edit
+               </div>
+             </div>
 
             <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
                 class="shipping-form-container">
@@ -58,9 +71,22 @@
         <div *ngFor="let item of cart.items.A3; let i = index" [attr.data-index]="i" class="shipping-box">
             <div class="no-form">
                 <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
-                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Shipping details
+                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)" *ngIf="!isFormComplete">Add Shipping details
                 </div>
             </div>
+
+            <div class="configuredFormControl" *ngIf="isFormComplete">
+              <div class="configuredBadge">
+                <img id="configuredBadgeLogo" src="../assets/formConfigured.svg">
+                <span class="configuredText">Configured</span>
+              </div>
+              <div
+                 class="shipping-details-button-edit"
+                 type="button"
+                 (click)="expandForm(item.productSize, i)">
+                 Edit
+               </div>
+             </div>
 
             <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
                 class="shipping-form-container">

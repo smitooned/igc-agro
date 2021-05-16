@@ -25,14 +25,39 @@ img{
   height: auto;
 }
 
-.ourProducts{
+.headerDiv {
   text-align: center;
   background-color: white;
   border-bottom: 1px #DFDFDF solid;
   margin-top: 0.2rem;
   font-size: 1.5rem;
+  display: inline-block;
+}
+
+
+.textDiv{
+  width: 57%;
+  margin: 0 18% 0 0;
+  display: inline-block;
 }
 
 .stepContainer {
   text-align: center;
+}
+
+
+.logoDiv{
+  margin: 0.1rem 0.5rem;
+  width: 18%;
+  display: inline-block;
+}
+
+#logo{
+  box-shadow:-1px 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 0.1rem;
+  /* float: left; */
+  width: 100%;
+  /* margin-bottom: 0.7rem; */
+  height: auto;
+  margin: 0.25rem;
 }

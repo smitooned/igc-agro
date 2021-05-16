@@ -13,6 +13,8 @@
 
 .descriptionMidPic{
   border-radius: 20px;
+  height:280px;
+  text-align: center;
 }
 
 .topicDescription img{
@@ -33,5 +35,9 @@
   width: 85%;
   display: inline-block;
   vertical-align: middle;
-
 }
+
+.imgContainer {
+  width: 100%;
+  text-align: center;
+ }

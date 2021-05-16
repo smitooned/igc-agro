@@ -26,7 +26,7 @@ export class DescriptionComponent implements OnInit {
 
   covidBox:any= {
       header:'',
-      imgsrc:'../assets/descriptionPhoto.png',
+      imgsrc:'../assets/covidWarriorKit.jpeg',
       description:{
         header:'Box includes :',
         first:'6 Alphonso Mangoes',

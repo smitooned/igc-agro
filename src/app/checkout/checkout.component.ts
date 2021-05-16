@@ -18,7 +18,7 @@ export class CheckoutComponent implements OnInit {
   totalA1Cost: any = 0;
   totalA2Cost: any = 0;
   totalA3Cost: any = 0;
-
+  amountDonated: any = 0;
   totalCost: any = 0;
 
   @Input() cart: any;
@@ -32,7 +32,7 @@ export class CheckoutComponent implements OnInit {
     this.totalA1Cost = this.priceA1 * this.cart.items["A1"].length;
     this.totalA2Cost = this.priceA2 * this.cart.items["A2"].length;
     this.totalA3Cost = this.priceA3 * this.cart.items["A3"].length;
-
+    this.amountDonated = 99 * (this.cart.items["A1"].length + this.cart.items["A2"].length + this.cart.items["A3"].length)
     this.totalCost = this.totalA1Cost + this.totalA2Cost + this.totalA3Cost;
   }
 
