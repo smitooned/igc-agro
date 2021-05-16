@@ -24,7 +24,8 @@ export class ShippingComponent implements OnInit {
     city:"",
     pincode: "",
     landmark: "",
-    recipientContact:""
+    recipientContact:"",
+    isComplete:false
   }
 
 
@@ -48,7 +49,8 @@ export class ShippingComponent implements OnInit {
   }
 
   saveButtonAction(productSize: any, index: any){
-    console.log("shipping details: ",this.shippingDetails);
+    // console.log("shipping details: ",this.shippingDetails);
+    this.shippingDetails.isComplete = true;
     this.cart.items[productSize][index].shippingDetails = Object.assign({},this.shippingDetails);
 
     this.selectedProductSize = '';
@@ -65,7 +67,8 @@ export class ShippingComponent implements OnInit {
       city:"",
       pincode: "",
       landmark: "",
-      recipientContact:""
+      recipientContact:"",
+      isComplete: false
     }
 
     this.handleBoxConfigUpdate(this.cart);

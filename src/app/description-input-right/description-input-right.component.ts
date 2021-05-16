@@ -15,6 +15,7 @@ export class DescriptionInputRightComponent implements OnInit {
   @Output() submitCartEvent = new EventEmitter<object>();
 
   @Input() cart: any;
+  @Input() allItemsConfigured: any;
 
   ngOnInit(): void {
   }

@@ -40,8 +40,9 @@ export class CartBoxesComponent implements OnInit {
       itemID: this.item.itemID,
       productSize: this.item.productSize,
       productType: this.item.productType,
-      indexOfItem: this.index
+      indexOfItem: this.index,
     };
+    update.checkoutVal["isComplete"] = true;
     // Process checkout data here
     // this.items = this.cartService.clearCart();
     // this.checkoutForm.reset();

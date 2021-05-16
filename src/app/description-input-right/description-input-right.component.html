@@ -69,5 +69,5 @@
 </ng-template>
 <!-- order Now button -->
 <div class="col-md-12" class="orderNowBtnContainer">
-  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" >Order Now </button>
+  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" [disabled]="!allItemsConfigured.all">Order Now </button>
 </div>

@@ -79,6 +79,13 @@ export class DetailsPageComponent implements OnInit {
     }
   }
 
+  allItemsConfigured:any = {
+    "A1":false,
+    "A2":false,
+    "A3":false,
+    "all":true
+  };
+
   addItem(valueIs:any) {
     this.selectedBtn=valueIs;
   }
@@ -94,27 +101,39 @@ export class DetailsPageComponent implements OnInit {
     } else {
       this.cart.items[cartUpdate.productSize].pop();
     }
+    if((this.cart.items["A1"].length > 0) || (this.cart.items["A2"].length > 0) || (this.cart.items["A3"].length > 0)) {
+      this.allItemsConfigured.all = true;
+    } else {
+      this.allItemsConfigured.all = false;
+    }
   }
 
   updateCartStage(submitUpdate:any) {
     console.log("Update cart stage: ",submitUpdate);
     this.cart.cartStage.currentStage = parseInt(this.cart.cartStage.currentStage) + 1;
+    if(this.cart.cartStage.currentStage == 4 || this.cart.cartStage.currentStage == 5) {
+      this.allItemsConfigured.all = true;
+    }else{
+      this.allItemsConfigured.all = false;
+    }
   }
 
   updateBoxConfig(update:any) {
     this.cart.items[update.productSize][update.indexOfItem].rxtx = update.checkoutVal;
-    console.log(this.cart);
+    // console.log(this.cart);
+    this.checkForCompletion("rxtx");
   }
 
   updateArrangementStage(cart: any){
     console.log("Updating cart stage: ", cart, this.cart);
     this.cart = cart;
-
+    this.allItemsConfigured.all = true;
   }
 
   updateShippingStage(cart: any){
     console.log("Updating shipping stage: ", cart, this.cart);
     this.cart = cart;
+    this.checkForCompletion("shippingDetails");
   }
 
   updateCheckoutStage(cart: any){
@@ -122,4 +141,27 @@ export class DetailsPageComponent implements OnInit {
     this.cart = cart;
   }
 
+  checkForCompletion(attribute:any) {
+    let sizes = Object.keys(this.cart.items);
+
+    sizes.forEach((size:string) => {
+
+      if(this.cart.items[size].length > 0){
+
+        for(let element of this.cart.items[size]) {
+          if(element[attribute].isComplete == true) {
+            this.allItemsConfigured[size] = true
+          } else if(element[attribute].isComplete == false) {
+            this.allItemsConfigured[size] = false;
+            break;
+          }
+        }
+      } else {
+        this.allItemsConfigured[size] = true;
+      }
+
+    });
+
+    this.allItemsConfigured["all"] = this.allItemsConfigured["A1"] * this.allItemsConfigured["A2"] * this.allItemsConfigured["A3"];
+  }
 }
