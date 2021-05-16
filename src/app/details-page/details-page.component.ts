@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { startWith } from 'rxjs/operators';
 import { v4 as uuidv4 } from 'uuid';
+import { generate } from 'shortid';
 
 @Component({
   selector: 'app-details-page',
@@ -93,7 +94,8 @@ export class DetailsPageComponent implements OnInit {
   updateCart(cartUpdate:any) {
     if(parseInt(cartUpdate.countUpdate) > 0) {
       let newItem = Object.assign({},this.item);
-      let newItemUID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+      // let newItemUID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+      let newItemUID = generate();
       newItem.productType = cartUpdate.productType;
       newItem.productSize = cartUpdate.productSize;
       newItem.itemID = newItemUID;
