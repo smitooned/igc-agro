@@ -59,9 +59,10 @@ ${index+1})*To:* ${item.rxtx.to}
     *Personal Note:* ${item.rxtx.message}
     *From:* ${item.rxtx.from}
     *Box Arrangment:* ${item.boxArrangement}
-    *Address:* ${item.shippingDetails.apartment}, ${item.shippingDetails.location}
+    *Address:* ${item.shippingDetails.address_line_1}, ${item.shippingDetails.address_line_2}, ${item.shippingDetails.city}
     *Pincode:* ${item.shippingDetails.pincode}
-    *Nearest Landmark:* ${item.shippingDetails.landmark}${dummy}
+    *Nearest Landmark:* ${item.shippingDetails.landmark}
+    *Recipient Contact:* ${item.shippingDetails.recipientContact}${dummy}
         `
         })
         this.orderText +=`

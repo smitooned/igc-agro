@@ -55,10 +55,12 @@ export class DetailsPageComponent implements OnInit {
     shippingDetails: {
       region: '',
       nearestCentre: '',
-      location: '', //address
-      apartment: '', // apartment
-      landmark: '',
+      address_line_1: '',
+      address_line_2: '',
+      city:"", // address city
       pincode: '',
+      landmark: '',
+      recipientContact:'',
       isValid: null,
       isComplete: false
     }

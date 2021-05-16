@@ -4,8 +4,22 @@
         <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="shipping-box">
             <div class="no-form">
                 <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
-                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)">Shipping details
+                <div class="shipping-details-button" (click)="expandForm(item.productSize, i)" *ngIf="!isFormComplete">Add Shipping details
                 </div>
+
+                <div class="configuredFormControl" *ngIf="isFormComplete">
+                  <div class="configuredBadge">
+                    <img id="configuredBadgeLogo" src="../assets/formConfigured.svg">
+                    <span class="configuredText">Configured</span>
+                  </div>
+                  <div
+                     class="shipping-details-button-edit"
+                     type="button"
+                     (click)="expandForm(item.productSize, i)">
+                     Edit
+                   </div>
+                 </div>
+
             </div>
 
             <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
@@ -62,31 +76,45 @@
     <div class="shipping-form">
         <div class="shipping-form-input">
             <div class="label">
-                Address:-
+                Address Line 1:-
             </div>
             <div class="input-box">
-                <input placeholder="Select the region of delivery" [(ngModel)]="shippingDetails.location">
+                <input placeholder="Enter address" [(ngModel)]="shippingDetails.address_line_1">
             </div>
 
             <div class="label">
-                Enter Block Number:-
+                Address Line 2:-
             </div>
             <div class="input-box">
-                <input placeholder="Enter address" [(ngModel)]="shippingDetails.apartment">
+                <input placeholder="Enter address" [(ngModel)]="shippingDetails.address_line_2">
+            </div>
+
+            <div class="label">
+                Enter City:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter City" [(ngModel)]="shippingDetails.city">
             </div>
 
             <div class="label">
                 Enter Pincode:-
             </div>
             <div class="input-box">
-                <input placeholder="Enter pincode" [(ngModel)]="shippingDetails.pincode">
+                <input placeholder="Enter pincode" type="number" [(ngModel)]="shippingDetails.pincode">
             </div>
 
             <div class="label">
                 Enter Nearest Landmark:-
             </div>
             <div class="input-box">
-                <input placeholder="Enter nearest landmark" [(ngModel)]="shippingDetails.location">
+                <input placeholder="Enter nearest landmark" [(ngModel)]="shippingDetails.landmark">
+            </div>
+
+            <div class="label">
+                Recipient Contact:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter Recipient Contact Number" type="number" [(ngModel)]="shippingDetails.recipientContact">
             </div>
         </div>
 

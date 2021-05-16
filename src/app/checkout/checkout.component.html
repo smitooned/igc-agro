@@ -8,7 +8,7 @@
                     <div class="shipping-details-button" (click)="showDetails(item.productSize, i)">Show Details
                     </div>
                 </div>
-    
+
                 <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
                     class="shipping-form-container">
                     <hr>
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="A2SizeBoxes" *ngIf="cart.items.A2.length > 0">
         <p>A2 Size Boxes</p>
         <div class="shipping-box-container">
@@ -28,7 +28,7 @@
                     <div class="shipping-details-button" (click)="showDetails(item.productSize, i)">Show Details
                     </div>
                 </div>
-    
+
                 <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
                     class="shipping-form-container">
                     <hr>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="A3SizeBoxes" *ngIf="cart.items.A3.length > 0">
         <p>A3 Size Boxes</p>
         <div class="shipping-box-container">
@@ -48,7 +48,7 @@
                     <div class="shipping-details-button" (click)="showDetails(item.productSize, i)">Show Details
                     </div>
                 </div>
-    
+
                 <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
                     class="shipping-form-container">
                     <hr>
@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="A2SizeBoxes" *ngIf="cart.items.A2.length > 0">
         <div class="confirm-row">
             <div class="name">
@@ -84,8 +84,8 @@
             </div>
         </div>
     </div>
-    
-    <div class="A3SizeBoxes" *ngIf="cart.items.A3.length > 0">   
+
+    <div class="A3SizeBoxes" *ngIf="cart.items.A3.length > 0">
         <div class="confirm-row">
             <div class="name">
                 {{cart.items.A3.productType}} A3 Size<br>
@@ -144,17 +144,24 @@
 
 
             <div class="label">
-                Address
+                Address Line 1
             </div>
             <div class="label-value">
-                {{item.shippingDetails.location}}
+                {{item.shippingDetails.address_line_1}}
             </div>
 
             <div class="label">
-                House
+                Address Line 2
             </div>
             <div class="label-value">
-                {{item.shippingDetails.apartment}}
+                {{item.shippingDetails.address_line_2}}
+            </div>
+
+            <div class="label">
+                City
+            </div>
+            <div class="label-value">
+                {{item.shippingDetails.city}}
             </div>
 
             <div class="label">
@@ -169,6 +176,13 @@
             </div>
             <div class="label-value">
                 {{item.shippingDetails.landmark}}
+            </div>
+
+            <div class="label">
+                Recipient Contact
+            </div>
+            <div class="label-value">
+                {{item.shippingDetails.recipientContact}}
             </div>
         </div>
     </div>

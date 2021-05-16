@@ -1,5 +1,7 @@
 .shipping-box-container .shipping-box .no-form {
-    display: flex;
+    display: inline-block;
+    vertical-align: middle;
+    width:100%;
 }
 
 .shipping-box {
@@ -13,18 +15,29 @@
 .shipping-box-container .shipping-box .box-name {
     display: inline-block;
     margin: auto 0;
-    width: 50%;
-    margin-left: 15px;
+    width: 35%;
+    margin-left: 10px;
+    vertical-align: middle;
 }
 
 .shipping-details-button {
-    display: inline-flex;
-    width: 50%;
-    align-items: center;
-    text-align: center;
+    display: inline-block;
+    width: 58%;
+    /* align-items: center; */
+    text-align: right;
     color: #f29722;
-    margin-right: 15px;
-    justify-content: center;
+    margin-right: 10px;
+    /* justify-content: center; */
+}
+
+.shipping-details-button-edit {
+    display: inline-block;
+    width: auto;
+    /* align-items: center; */
+    text-align: right;
+    color: #f29722;
+    margin-right: 10px;
+    /* justify-content: center; */
 }
 
 .shipping-form input {
@@ -89,4 +102,36 @@
 
 p{
     text-align: center;
+}
+
+.configuredBadge {
+  display: inline-block;
+  color: #F29722;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.configuredText{
+  vertical-align: middle;
+}
+
+#configuredBadgeLogo{
+  padding-right: 0.2rem;
+  height: auto;
+  width: 20%;
+}
+
+/* #configuredFormControl {
+  padding-right: 0.2rem;
+  height: 100%;
+  width: 60%;
+  vertical-align: middle;
+  display: inline-block;
+} */
+
+.configuredFormControl {
+  width: 58%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
 }

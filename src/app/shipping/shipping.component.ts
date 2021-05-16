@@ -11,16 +11,20 @@ export class ShippingComponent implements OnInit {
   @Input() cart: any;
   @Output() updateShippingStage = new EventEmitter<object>();
 
+  isFormComplete: boolean = false;
+
   selectedProductSize: any = '';
   selectedProductIndex: any = -1;
 
   shippingDetails = {
-    apartment: "",
-    landmark: "",
-    location: "",
+    region: "",
     nearestCentre: "",
+    address_line_1: "",
+    address_line_2: "",
+    city:"",
     pincode: "",
-    region: ""
+    landmark: "",
+    recipientContact:""
   }
 
 
@@ -48,17 +52,22 @@ export class ShippingComponent implements OnInit {
     this.cart.items[productSize][index].shippingDetails = Object.assign({},this.shippingDetails);
 
     this.selectedProductSize = '';
-      this.selectedProductIndex = -1;
+    this.selectedProductIndex = -1;
+
+    // form completion status update
+    this.isFormComplete = true;
 
     this.shippingDetails = {
-      apartment: "",
-      landmark: "",
-      location: "",
+      region: "",
       nearestCentre: "",
+      address_line_1: "",
+      address_line_2: "",
+      city:"",
       pincode: "",
-      region: ""
+      landmark: "",
+      recipientContact:""
     }
-    
+
     this.handleBoxConfigUpdate(this.cart);
   }
 
@@ -70,5 +79,4 @@ export class ShippingComponent implements OnInit {
     console.log(event);
     this.updateShippingStage.emit(event);
   }
-
 }
