@@ -32,6 +32,7 @@ transition-duration: 0.5s;
 
 .leftSide{
   background-color: #FFF7E1;
+  width: 60%;
 }
 
 button{
@@ -45,17 +46,19 @@ button{
 }
 
 .rightSide{
+  width: 40%;
   background-color: #FFF7E1;
   overflow: hidden;
 }
 
 .tagLineLanding{
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 #tiltedImg{
   height: auto;
-  width: 120%;
+  width: 125%;
 }
 
 .orderNowLandingDiv{
@@ -64,7 +67,7 @@ button{
 }
 
 #orderNowLanding{
-  background-color: #FCE5B5;
+  background-color: #FFC857;
   padding: 0.6rem 1rem;;
   border-radius: 22px;
 }

@@ -46,11 +46,6 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
     this.showDetail=this.mangoes;
     // window.setInterval(changeDetail);
-    for(let i=0;i<100;i++){
-    setInterval(()=>{this.showDetail=this.covidTools;},3000);
-    setInterval(()=>{this.showDetail=this.PMCaresFund;},6000);
-    setInterval(()=>{this.showDetail=this.mangoes;},9000);
-    }
   }
 
   switchDetail(event:any) {

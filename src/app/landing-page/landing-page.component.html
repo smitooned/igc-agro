@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+  <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,54 +12,54 @@
       <title>Document</title>
    </head>
 
-   <body>
-      <div class="container">
-        <div class="upper">
-          <div class="logoDiv">
-             <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
-          </div>
+  <body>
+    <div class="container">
+      <div class="upper">
+        <div class="logoDiv">
+          <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
+        </div>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-6 leftSide">
-                <span class="tagLineLanding">Gift a Covid Warrior Kit to your Loved Ones this Summer</span><hr>
-
-                <div class="switchBtn">
-                  <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
-                    <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
-                  </button>
-                  <button class="covidToolsBtn" type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
-                    <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
-                  </button>
-                  <button class="PMCaresFundBtn" type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
-                    <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
-                  </button>
-                </div>
-                <div class="">
-                  <span><b>{{showDetail.header}}</b></span>
-                  <p>{{showDetail.text.a}}<br> {{showDetail.text.b}}<br>{{showDetail.text.c}}</p>
-                </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6 leftSide">
+              <div class="tagLineLanding">
+                <span>Gift a Covid Warrior Kit to your Loved Ones this Summer</span>
               </div>
+              <hr>
 
-              <div class="col-6 rightSide">
-                <img class="" id="tiltedImg" src="../assets/tiltedImg.png" alt="">
+              <div class="switchBtn">
+                <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
+                  <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
+                </button>
+                <button class="covidToolsBtn" type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
+                  <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
+                </button>
+                <button class="PMCaresFundBtn" type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
+                  <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
+                </button>
+              </div>
+              <div class="">
+                <span><b>{{showDetail.header}}</b></span>
+                <p>{{showDetail.text.a}}<br> {{showDetail.text.b}}<br>{{showDetail.text.c}}</p>
               </div>
             </div>
-          </div>
 
-          <div class="orderNowLandingDiv">
-            <button id="orderNowLanding" class="btn" routerLink="/details" type="button" name="button">Order Gift Box -></button>
+            <div class="col-6 rightSide">
+              <img class="" id="tiltedImg" src="../assets/tiltedImg.png" alt="">
+            </div>
           </div>
         </div>
+
+      <div class="orderNowLandingDiv">
+          <button id="orderNowLanding" class="btn" routerLink="/details" type="button" name="button">Order Gift Box -></button>
+        </div>
+      </div>
 
         <h3 class="OR">OR</h3>
 
         <div class="row otherButtons">
-          <div class="col-6">
+          <div class="col">
             <button id="getMangoesBtn" class="btn" (click)="routingBtn($event)" type="button" name="button">Get Mangoes<br>For You</button>
-          </div>
-          <div class="col-6">
-            <button id="bulkOrderBtn" class="btn" type="button" name="button">Bulk<br>Order</button>
           </div>
         </div>
 
