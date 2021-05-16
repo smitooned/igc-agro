@@ -15,9 +15,9 @@
    <body>
       <div class="container">
         <div class="upper">
-          <header>
-             <img id="logo" src="../assets/indiaGoldAgro.png" alt="indiagold logo">
-          </header>
+          <div class="logoDiv">
+             <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
+          </div>
 
           <div class="container">
             <div class="row">
@@ -26,12 +26,12 @@
 
                 <div class="switchBtn">
                   <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
-                    <img src="../assets/mango.svg" alt=""  data-btn="mangoes">
+                    <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
                   </button>
-                  <button type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
+                  <button class="covidToolsBtn" type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
                     <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
                   </button>
-                  <button type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
+                  <button class="PMCaresFundBtn" type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
                     <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
                   </button>
                 </div>

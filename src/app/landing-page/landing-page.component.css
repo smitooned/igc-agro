@@ -20,9 +20,14 @@ transition-duration: 0.5s;
   padding: 1rem;
 }
 
-#logo{
+.logoDiv{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow:-1px 2px 4px rgba(0, 0, 0, 0.08) ;
+  padding: 0.5rem;
   width: 30%;
   height: auto;
+  margin-bottom: 0.5rem;
 }
 
 .leftSide{
@@ -49,8 +54,8 @@ button{
 }
 
 #tiltedImg{
-    height: auto;
-    width: 120%;
+  height: auto;
+  width: 120%;
 }
 
 .orderNowLandingDiv{
