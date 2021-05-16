@@ -35,12 +35,13 @@ export class DescriptionComponent implements OnInit {
           b:'Sanitizer',
           c:'No touch Covid key'
         },
-        third:'Rs 99/- donated to Maansuki foundation'
+        third:'Rs 99/- donated to Maansuki foundation',
+        isAvailable: true
       }
   };
     mangoesForYou:any= {
       header:'Coming Soon...',
-      imgsrc:'',
+      imgsrc:'../assets/mango_coming_soon.gif',
       description:{
         header:'',
         first:'',
@@ -49,7 +50,8 @@ export class DescriptionComponent implements OnInit {
           b:'',
           c:''
         },
-        third:''
+        third:'',
+        isAvailable: false
       }
   };
     bulkOrder:any= {

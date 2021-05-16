@@ -1,8 +1,8 @@
 <div class="descriptionPart">
   <h6 class="topicTagline">{{details.header}}</h6>
-  <img class="img-fluid descriptionMidPic" src={{details.imgsrc}} alt="mangoessss">
+  <img class="img-fluid descriptionMidPic" src={{details.imgsrc}} alt="mangoes for you">
   <h3 class="topicHeader">{{details.description.header}} </h3>
-  <div class="row topicDescription">
+  <div class="row topicDescription" *ngIf="details.description.isAvailable">
     <div class="col-lg-4">
       <img class="d-lg-block" src="../assets/mango.svg" alt=""  data-btn="mangoes">
       <span>{{details.description.first}}</span>

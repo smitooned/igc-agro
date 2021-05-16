@@ -89,6 +89,11 @@ export class DetailsPageComponent implements OnInit {
 
   addItem(valueIs:any) {
     this.selectedBtn=valueIs;
+    if(valueIs == "mangoesForYou") {
+      this.allItemsConfigured.all = false;
+    }else {
+      this.allItemsConfigured.all = true
+    }
   }
 
   updateCart(cartUpdate:any) {
