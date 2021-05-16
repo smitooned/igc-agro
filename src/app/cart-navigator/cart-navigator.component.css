@@ -21,7 +21,7 @@ button:hover{
 }
 
 img{
-  width: 10%;
+  /* width: 10%; */
   height: auto;
 }
 
@@ -31,4 +31,8 @@ img{
   border-bottom: 1px #DFDFDF solid;
   margin-top: 0.2rem;
   font-size: 1.5rem;
+}
+
+.stepContainer {
+  text-align: center;
 }
