@@ -16,7 +16,22 @@
 }
 
 .topicDescription img{
-  margin: 0.2rem;
+  margin: 0.5rem;
   width: 30px;
   height: auto;
+}
+
+.imgType{
+  display: inline-block;
+  vertical-align: middle;
+  width: 15%;
+  height: auto;
+}
+
+.textType{
+  padding-top: 0.5rem;
+  width: 85%;
+  display: inline-block;
+  vertical-align: middle;
+
 }
