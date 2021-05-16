@@ -37,3 +37,8 @@ transition-duration: 0.5s;
   width: 20%;
   height: auto;
 }
+
+.selected {
+  border-bottom: 1.5px solid #33322f;
+  border-radius: 0px;
+}
