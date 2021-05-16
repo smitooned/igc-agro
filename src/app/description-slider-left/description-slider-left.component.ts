@@ -12,6 +12,7 @@ export class DescriptionSliderLeftComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
     this.newItemEvent.emit('selectedBtn');
   }
 

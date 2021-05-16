@@ -98,23 +98,38 @@ button{
 }
 
 #devgadMangoesFeaturesA{
-  width: 40%;
+  width: 90%;
   height: auto;
-  padding: 3%;
+  padding: 0.3rem;
 }
 
 #devgadMangoesFeaturesB{
-  width: 40%;
+  width: 90%;
   height: auto;
-  padding: 3%;
+  padding: 0.3rem;
 }
 
 #devgadMangoesFeaturesC{
-  width: 40%;
+  width: 90%;
   height: auto;
-  padding: 3%;
+  padding: 0.3rem;
 }
 
 .whyDevgadMangoes{
   padding-top: 5%;
+}
+
+.footer{
+  padding: 0.8rem;
+  background-color: #333;
+  color: white;
+}
+
+.addressText{
+  padding: 0.5rem 1rem;
+}
+
+a{
+  text-decoration: none !important;
+  color: white;
 }

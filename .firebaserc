@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "igcagro-429af"
+  },
+  "targets": {
+    "igcagro-429af": {
+      "hosting": {
+        "igc-agro": [
+          "igcagro-429af"
+        ]
+      }
+    }
   }
 }

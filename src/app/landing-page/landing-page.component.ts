@@ -29,15 +29,15 @@ export class LandingPageComponent implements OnInit {
   covidTools:any={
     header:'Covid care kit',
     text:{
-      a:'Face Shield',
-      b:'Mask and Gloves',
-      c:'Sanitizer'
+      a:'Two N95 Masks',
+      b:'Hand Sanitizer (100ml)',
+      c:'One No-Touch COVID Key'
     }
   }
   PMCaresFund:any={
-    header:'PM cares fund',
+    header:'Donation',
     text:{
-      a:'Rs 100/- donation per order',
+      a:'Rs 99/- donation per order',
       b:'',
       c:''
     }
@@ -45,6 +45,7 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.showDetail=this.mangoes;
+    // window.setInterval(changeDetail);
   }
 
   switchDetail(event:any) {
@@ -53,13 +54,13 @@ export class LandingPageComponent implements OnInit {
   changeDetail(btnType:any){
     if(btnType=='mangoes'){
       this.showDetail=this.mangoes;
-      console.log("in mangoes");
+      // console.log("in mangoes");
     } else if(btnType=='covidTools'){
       this.showDetail=this.covidTools;
-      console.log("in covidTools");
+      // console.log("in covidTools");
     } else if(btnType=='PMCaresFund'){
       this.showDetail=this.PMCaresFund;
-      console.log("in PMCaresFund");
+      // console.log("in PMCaresFund");
     }
   }
 

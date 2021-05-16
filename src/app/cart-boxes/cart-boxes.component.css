@@ -1,5 +1,6 @@
 .boxHeader{
-    margin: 0.5rem 0.5rem;
+    margin: 0.3rem 0.5rem;
+    font-size: 1rem;
 }
 
 .detailBox{
@@ -11,7 +12,7 @@
 button{
     margin: 0.5rem 0rem!important;
     border: none !important;
-    border-radius: 0.5rem;
+    border-radius: 15px;
 }
 
 .collapser{
@@ -19,6 +20,7 @@ button{
     border: 2px #F29722 !important;
     color: #F29722;
     margin: 0rem !important;
+    padding: 0.3rem;
 }
 
 .submitter{
@@ -41,15 +43,14 @@ button{
 }
 
 .boxNameContainer {
-  width: 60%;
+  width: 50%;
   text-align: left;
   display: inline-block;
 }
 
 .buttonContainer {
-  width: 40%;
+  width: 50%;
   display: inline-block;
-  vertical-align: top;
   text-align: right;
 }
 
@@ -64,4 +65,25 @@ button{
 
 .btn:focus{
     box-shadow:none !important;
+}
+
+.configuredFormControl {
+  display: inline-block;
+}
+
+.configuredBadge {
+  display: inline-block;
+  color: #F29722;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.configuredText{
+  vertical-align: middle;
+}
+
+#configuredBadgeLogo{
+  padding-right: 0.2rem;
+  height: auto;
+  width: 20%;
 }

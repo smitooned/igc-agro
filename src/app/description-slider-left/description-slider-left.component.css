@@ -1,7 +1,7 @@
 button{
     color: #33322F !important;
-    width: 30%;
     height: auto;
+    width: 50%;
 }
 
 .btn:focus{
@@ -9,7 +9,7 @@ button{
 }
 
 button:hover{
-border-bottom: 1px solid black;
+border: 1px solid black;
 transition-duration: 0.5s;
 }
 
@@ -19,9 +19,21 @@ transition-duration: 0.5s;
 }
 
 .ourProducts{
+  display: inline-block;
   text-align: center;
   background-color: white;
   border-bottom: 1px #DFDFDF solid;
-  margin-top: 0.2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.ourProductsText{
+  width: 60%;
+  margin:0 auto;
+  padding-top: 1rem;
+}
+
+#logo{
+  float: left;
+  width: 20%;
+  height: auto;
 }

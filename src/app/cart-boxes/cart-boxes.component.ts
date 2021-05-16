@@ -18,6 +18,8 @@ export class CartBoxesComponent implements OnInit {
   @Input() index: any;
   @Output() boxConfigUpdated = new EventEmitter<object>();
 
+  isFormComplete: boolean = false;
+
   checkoutForm = this.formBuilder.group({
     to: '',
     message: '',
@@ -32,7 +34,7 @@ export class CartBoxesComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('Your order has been submitted', this.checkoutForm.value);
+    //update main cart in parent
     let update = {
       checkoutVal: this.checkoutForm.value,
       itemID: this.item.itemID,
@@ -44,5 +46,7 @@ export class CartBoxesComponent implements OnInit {
     // this.items = this.cartService.clearCart();
     // this.checkoutForm.reset();
     this.boxConfigUpdated.emit(update);
+    this.isFormComplete = true;
+    this.isCollapsed = !this.isCollapsed;
   }
 }

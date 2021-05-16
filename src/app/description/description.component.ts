@@ -31,11 +31,11 @@ export class DescriptionComponent implements OnInit {
         header:'Box includes :',
         first:'6 Alphonso Mangoes',
         second:{
-          a:'Face Shield',
-          b:'Mask and gloves',
-          c:'Sanitizer'
+          a:'2 N95 Masks',
+          b:'Sanitizer',
+          c:'No touch Covid key'
         },
-        third:'Rs 100/- donated to PM cares fund'
+        third:'Rs 99/- donated to Maansuki foundation'
       }
   };
     mangoesForYou:any= {

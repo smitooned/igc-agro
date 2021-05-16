@@ -47,7 +47,9 @@ export class DetailsPageComponent implements OnInit {
     rxtx: {
       to: null,
       message: null,
-      from: null
+      from: null,
+      isValid:null,
+      isComplete:false
     },
     boxArrangement:'Raw',
     shippingDetails: {
@@ -56,12 +58,19 @@ export class DetailsPageComponent implements OnInit {
       location: '', //address
       apartment: '', // apartment
       landmark: '',
-      pincode: ''
+      pincode: '',
+      isValid: null,
+      isComplete: false
     }
   }
 
   priceList: any = {
     COVIDBox: {
+      A1: 499,
+      A2: 599,
+      A3: 699
+    },
+    devgadAlphonso: {
       A1: 499,
       A2: 599,
       A3: 699
@@ -73,7 +82,6 @@ export class DetailsPageComponent implements OnInit {
   }
 
   updateCart(cartUpdate:any) {
-    // console.log("event reached parent", cartUpdate);
     if(parseInt(cartUpdate.countUpdate) > 0) {
       let newItem = Object.assign({},this.item);
       let newItemUID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'

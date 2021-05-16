@@ -1,5 +1,5 @@
 <ng-template [ngIf]="cart.cartStage.currentStage == 0">
-  
+
   <div>
     <p id="orderSummaryHeader">Types of Mangoes</p>
   </div>
@@ -19,7 +19,7 @@
       <br>
       <span><b>226-290</b> grams</span>
     </div>
-    
+
     <div class="col-4 typeA3">
       <span class="typeName">A3</span>
       <br>
@@ -28,12 +28,12 @@
       <span><b>291-390</b> grams</span>
     </div>
   </div>
-  
+
   <p id="orderSummaryHeader">Select Your Boxes</p>
   <div class="summaryBox">
-    <span class="typeOfSection">Covid Box size A1</span>
+    <span class="typeOfSection">Covid Warrior Box A1</span>
     <div class="d-flex justify-content-between">
-      <span><b>Rs 500</b>/box</span>
+      <span><b>Rs 499</b>/box</span>
       <div class="ms-auto countBtn">
         <button type="button" name="button" (click)="updateCart($event,-1,'A1', 'COVID Box')">-</button>
         <span id="count">{{cart.items.A1.length}}</span>
@@ -43,9 +43,9 @@
   </div>
 
   <div class="summaryBox">
-    <span class="typeOfSection">Covid Box size A2</span>
+    <span class="typeOfSection">Covid Warrior Box A2</span>
     <div class="d-flex justify-content-between">
-      <span><b>Rs 500</b>/box</span>
+      <span><b>Rs 599</b>/box</span>
       <div class="ms-auto countBtn">
         <button type="button" name="button" (click)="updateCart($event, -1, 'A2', 'COVID Box')">-</button>
         <span id="count">{{cart.items.A2.length}}</span>
@@ -55,9 +55,9 @@
   </div>
 
   <div class="summaryBox">
-  <span class="typeOfSection">Covid Box size A3</span>
+  <span class="typeOfSection">Covid Warrior Box A3</span>
     <div class="d-flex justify-content-between">
-      <span><b>Rs 500</b>/box</span>
+      <span><b>Rs 699</b>/box</span>
       <div class="ms-auto countBtn">
         <button type="button" name="button" (click)="updateCart($event, -1, 'A3', 'COVID Box')">-</button>
         <span id="count">{{cart.items.A3.length}}</span>
