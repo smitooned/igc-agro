@@ -70,7 +70,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   whatsappMeForQuery() {
-
       this.queryText = `Hey, Can you please help me?`;
       let res = encodeURI(this.queryText);
       var win = window.open(`https://wa.me/${+919142902999}?text=${res}`, '_blank');

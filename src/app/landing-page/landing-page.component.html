@@ -13,10 +13,25 @@
    </head>
    <body>
       <div class="container">
-         <div class="upper">
+
+
+        <!-- 1st row -->
+        <div class="headerDiv">
+          <div class="floatingHeader">
             <div class="logoDiv">
-               <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
+              <img class="" id="logo" class="logoImage" src="../assets/logo.png" alt="indiagold logo">
             </div>
+          </div>
+          <div class="buttonDiv">
+             <button id="orderNowLanding" class="btn" routerLink="/details" (click)="routingBtn($event)" type="button" name="button">Order Now</button>
+          </div>
+        </div>
+
+         <div class="upper">
+            <!-- <div class="logoDiv">
+               <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
+            </div> -->
+
             <div class="container">
                <div class="row">
                   <div class="col-6 leftSide">
@@ -25,14 +40,14 @@
                      </div>
                      <hr>
                      <div class="switchBtn">
-                        <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
-                        <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
+                        <button type="button" class="btn featureBtn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
+                          <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
                         </button>
-                        <button class="covidToolsBtn" type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
-                        <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
+                        <button type="button" class="btn featureBtn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
+                          <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
                         </button>
-                        <button class="PMCaresFundBtn" type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
-                        <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
+                        <button type="button" class="btn featureBtn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
+                          <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
                         </button>
                      </div>
                      <div class="">
@@ -45,9 +60,7 @@
                   </div>
                </div>
             </div>
-            <div class="orderNowLandingDiv">
-               <button id="orderNowLanding" class="btn" routerLink="/details" type="button" name="button">Order Gift Box -></button>
-            </div>
+
          </div>
          <!-- <h3 class="OR">OR</h3> -->
          <!-- <div class="row otherButtons">
@@ -101,7 +114,7 @@
             </div>
          </footer>
       </div>
-      <div class="whatsappFloatingButton">
+      <div class="whatsappFloatingButton" (click)="whatsappMeForQuery()">
         <img class="whatsapp_logo" src="../assets/WhatsApp Logo Icon.svg" (click)="whatsappMeForQuery">
       </div>
       <!-- JavaScript Bundle with Popper -->
