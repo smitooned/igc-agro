@@ -47,13 +47,13 @@ img{
 
 
 .logoDiv{
-  margin: 0.1rem 0.5rem;
+  margin: 0 0.5rem;
   width: 18%;
   display: inline-block;
 }
 
 #logo{
-  box-shadow:-1px 2px 4px rgba(0, 0, 0, 0.08);
+  /* box-shadow:-1px 2px 4px rgba(0, 0, 0, 0.08); */
   padding: 0.1rem;
   /* float: left; */
   width: 100%;

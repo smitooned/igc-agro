@@ -75,7 +75,7 @@ export class DescriptionComponent implements OnInit {
 
   ngOnChanges(changes: any) {
     // changes.prop contains the old and the new value...
-    console.log(changes.btnType);
+    // console.log(changes.btnType);
     this.changeView(this.btnType);
   }
 
