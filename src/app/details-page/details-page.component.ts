@@ -14,7 +14,7 @@ export class DetailsPageComponent implements OnInit {
   ngOnInit(): void {
       this.cart.orderID = generate(); //uuidv4();
 
-      window.onbeforeunload = this.closing;
+      // window.onbeforeunload = this.closing;
 
 
   }
@@ -93,19 +93,20 @@ export class DetailsPageComponent implements OnInit {
 
 
   closing() {
-    console.log("function alrt WORKS !!!!");
-    // window.alert("closing now.....");
+    // this.canDeactivate();
 
-    window.onload = function() {
-        window.addEventListener("onbeforeunload", function (e:any) {
-            var confirmationMessage = 'It looks like you have been editing something. '
-                                    + 'If you leave before saving, your changes will be lost.';
+    // window.onload = function() {
+    //     window.addEventListener("onbeforeunload", function (e:any) {
+    //         var confirmationMessage = 'It looks like you have been editing something. '
+    //                                 + 'If you leave before saving, your changes will be lost.';
+    //
+    //         (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    //         return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+    //     });
+    // };
 
-            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-            return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-        });
-    };
    }
+
 
   addItem(valueIs:any) {
     this.selectedBtn=valueIs;
