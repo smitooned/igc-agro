@@ -141,3 +141,19 @@ a{
   text-decoration: none !important;
   color: white;
 }
+
+.whatsappFloatingButton {
+  bottom:0px;
+  left:85%;
+  width: 50px;
+  text-align: center;
+  background-color: white;
+  padding: 6px;
+  position: sticky;
+  border-radius: 6px 6px 0px 0px;
+  box-shadow:-1px 2px 4px rgba(0, 0, 0, 0.08) ;
+}
+
+.whatsapp_logo {
+  width: 40px;
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+   <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,107 +11,99 @@
       <link rel="stylesheet" href="/home.css">
       <title>Document</title>
    </head>
-
-  <body>
-    <div class="container">
-      <div class="upper">
-        <div class="logoDiv">
-          <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
-        </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-6 leftSide">
-              <div class="tagLineLanding">
-                <span>Gift a Covid Warrior Kit to your Loved Ones this Summer</span>
-              </div>
-              <hr>
-
-              <div class="switchBtn">
-                <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
-                  <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
-                </button>
-                <button class="covidToolsBtn" type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
-                  <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
-                </button>
-                <button class="PMCaresFundBtn" type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
-                  <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
-                </button>
-              </div>
-              <div class="">
-                <span><b>{{showDetail.header}}</b></span>
-                <p>{{showDetail.text.a}}<br> {{showDetail.text.b}}<br>{{showDetail.text.c}}</p>
-              </div>
+   <body>
+      <div class="container">
+         <div class="upper">
+            <div class="logoDiv">
+               <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
             </div>
-
-            <div class="col-6 rightSide">
-              <img class="" id="tiltedImg" src="../assets/tiltedImg.png" alt="">
+            <div class="container">
+               <div class="row">
+                  <div class="col-6 leftSide">
+                     <div class="tagLineLanding">
+                        <span>Gift a Covid Warrior Kit to your Loved Ones this Summer</span>
+                     </div>
+                     <hr>
+                     <div class="switchBtn">
+                        <button type="button" class="btn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
+                        <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
+                        </button>
+                        <button class="covidToolsBtn" type="button" class="btn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">
+                        <img src="../assets/covidTools.svg" alt=""  data-btn="covidTools">
+                        </button>
+                        <button class="PMCaresFundBtn" type="button" class="btn" data-bs-toggle="button" data-btn="PMCaresFund" (click)="switchDetail($event)" autocomplete="off">
+                        <img src="../assets/heart.svg" alt=""  data-btn="PMCaresFund">
+                        </button>
+                     </div>
+                     <div class="">
+                        <span><b>{{showDetail.header}}</b></span>
+                        <p>{{showDetail.text.a}}<br> {{showDetail.text.b}}<br>{{showDetail.text.c}}</p>
+                     </div>
+                  </div>
+                  <div class="col-6 rightSide">
+                     <img class="" id="tiltedImg" src="../assets/tiltedImg.png" alt="">
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-
-      <div class="orderNowLandingDiv">
-          <button id="orderNowLanding" class="btn" routerLink="/details" type="button" name="button">Order Gift Box -></button>
-        </div>
+            <div class="orderNowLandingDiv">
+               <button id="orderNowLanding" class="btn" routerLink="/details" type="button" name="button">Order Gift Box -></button>
+            </div>
+         </div>
+         <!-- <h3 class="OR">OR</h3> -->
+         <!-- <div class="row otherButtons">
+            <div class="col">
+               <button id="getMangoesBtn" class="btn" (click)="routingBtn($event)" type="button" name="button">Get Mangoes<br>For You</button>
+            </div>
+         </div> -->
+         <div class="devgadMangoesDescription">
+            <h2>History</h2>
+            <span>The Alphonso mango is a foreign fruit that came to India through Goa along with Alfonso De Albuquerque, the Portuguese explorer and military strategist who led many Portuguese invasions in the 1600s. From Goa, the Alphonso mango travelled to different places like Ratnagiri, other Konkan region and southern side of India as well.</span>
+            <h2 class="whyDevgadMangoes">Why Devgad mangoes ?</h2>
+            <div class="row devgadMangoesFeatures">
+               <div class="col-4">
+                  <img id="devgadMangoesFeaturesA" src="../assets/chemicalFree.svg" alt="Chemical Free">
+                  <br>
+                  <span>Chemical Free</span>
+               </div>
+               <div class="col-4">
+                  <img id="devgadMangoesFeaturesB" src="../assets/organic.svg" alt="100% organic">
+                  <br>
+                  <span>100% Organic</span>
+               </div>
+               <div class="col-4">
+                  <img id="devgadMangoesFeaturesC" src="../assets/carbideFree.svg" alt="Carbide Free">
+                  <br>
+                  <span>Carbide Free</span>
+               </div>
+            </div>
+            <span>Our mangoes are known across the world for its unique delicious taste, enticing aroma and
+            beautiful yellow-orange hue. They are rich with nutrients, minerals and vitamins. Our superior
+            quality has earned Geographical Identification (GI) Tag which is a hallmark of authenticity and
+            quality of a product produced in Devgad region. To get these features, we use the traditional
+            ripening process using grass haystack which is known as ‘Aadi’ in Devgad. We strictly prohibit the
+            use of calcium carbonate to speed up the ripening process and for early harvest, thus making our
+            mangoes “Carbide-Free”. We do not use artificial pesticides, chemical additives or synthetic
+            fertilisers in our farms. We believe in organic farming.
+            </span>
+         </div>
+         <footer class="footer">
+            <h4>Contact Us</h4>
+            <div class="row">
+               <div class="addressText col-lg-4">
+                  <span><b>Address:</b> 1201, Padmavati Heights, Navpada, Vile Parle East, Mumbai - 400057</span>
+               </div>
+               <div class="addressText col-lg-4">
+                  <span><b>Contact:</b><a href="tel:9920411548">+91 9920 411 548</a></span>
+               </div>
+               <div class="addressText col-lg-4">
+                  <span class="mailTo"><b>Email:</b><a href="mailto:info@indiagoldagro.com"> info@indiagoldagro.com</a></span>
+               </div>
+            </div>
+         </footer>
       </div>
-
-        <h3 class="OR">OR</h3>
-
-        <div class="row otherButtons">
-          <div class="col">
-            <button id="getMangoesBtn" class="btn" (click)="routingBtn($event)" type="button" name="button">Get Mangoes<br>For You</button>
-          </div>
-        </div>
-
-        <div class="devgadMangoesDescription">
-          <h2>History</h2>
-          <span>The Alphonso mango is a foreign fruit that came to India through Goa along with Alfonso De Albuquerque, the Portuguese explorer and military strategist who led many Portuguese invasions in the 1600s. From Goa, the Alphonso mango travelled to different places like Ratnagiri, other Konkan region and southern side of India as well.</span>
-
-          <h2 class="whyDevgadMangoes">Why Devgad mangoes ?</h2>
-          <div class="row devgadMangoesFeatures">
-            <div class="col-4">
-              <img id="devgadMangoesFeaturesA" src="../assets/chemicalFree.svg" alt="Chemical Free">
-              <br>
-              <span>Chemical Free</span>
-            </div>
-            <div class="col-4">
-              <img id="devgadMangoesFeaturesB" src="../assets/organic.svg" alt="100% organic">
-              <br>
-              <span>100% Organic</span>
-            </div>
-            <div class="col-4">
-              <img id="devgadMangoesFeaturesC" src="../assets/carbideFree.svg" alt="Carbide Free">
-              <br>
-              <span>Carbide Free</span>
-            </div>
-          </div>
-          <span>Our mangoes are known across the world for its unique delicious taste, enticing aroma and
-          beautiful yellow-orange hue. They are rich with nutrients, minerals and vitamins. Our superior
-          quality has earned Geographical Identification (GI) Tag which is a hallmark of authenticity and
-          quality of a product produced in Devgad region. To get these features, we use the traditional
-          ripening process using grass haystack which is known as ‘Aadi’ in Devgad. We strictly prohibit the
-          use of calcium carbonate to speed up the ripening process and for early harvest, thus making our
-          mangoes “Carbide-Free”. We do not use artificial pesticides, chemical additives or synthetic
-          fertilisers in our farms. We believe in organic farming.
-          </span>
-        </div>
-
-        <footer class="footer">
-          <h4>Contact Us</h4>
-          <div class="row">
-            <div class="addressText col-lg-4">
-              <span><b>Address:</b> 1201, Padmavati Heights, Navpada, Vile Parle East, Mumbai - 400057</span>
-            </div>
-            <div class="addressText col-lg-4">
-              <span><b>Contact:</b><a href="tel:9920411548"> +91 9920 411 548</a></span>
-            </div>
-            <div class="addressText col-lg-4">
-              <span class="mailTo"><b>Email:</b><a href="mailto:info@indiagoldagro.com"> info@indiagoldagro.com</a></span>
-            </div>
-          </div>
-        </footer>
+      <div class="whatsappFloatingButton">
+        <img class="whatsapp_logo" src="../assets/WhatsApp Logo Icon.svg" (click)="whatsappMeForQuery">
       </div>
-
       <!-- JavaScript Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>

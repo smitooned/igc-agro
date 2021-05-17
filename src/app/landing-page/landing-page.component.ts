@@ -42,6 +42,7 @@ export class LandingPageComponent implements OnInit {
       c:''
     }
   }
+  queryText: any = ""
 
   ngOnInit(): void {
     this.showDetail=this.mangoes;
@@ -66,5 +67,12 @@ export class LandingPageComponent implements OnInit {
 
   routingBtn(event:any){
     localStorage.setItem('selectedBtn',event.target.id);
+  }
+
+  whatsappMeForQuery() {
+
+      this.queryText = "Hey";
+      let res = encodeURI(this.queryText);
+      var win = window.open(`https://wa.me/${+918050027648}?text=${res}`, '_blank');
   }
 }

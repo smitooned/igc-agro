@@ -12,7 +12,11 @@ export class DetailsPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.cart.orderID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+      this.cart.orderID = generate(); //uuidv4();
+
+      window.onbeforeunload = this.closing;
+
+
   }
 
   selectedBtn='';
@@ -87,6 +91,22 @@ export class DetailsPageComponent implements OnInit {
     "all":true
   };
 
+
+  closing() {
+    console.log("function alrt WORKS !!!!");
+    // window.alert("closing now.....");
+
+    window.onload = function() {
+        window.addEventListener("onbeforeunload", function (e:any) {
+            var confirmationMessage = 'It looks like you have been editing something. '
+                                    + 'If you leave before saving, your changes will be lost.';
+
+            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+            return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+        });
+    };
+   }
+
   addItem(valueIs:any) {
     this.selectedBtn=valueIs;
     if(valueIs == "mangoesForYou") {
@@ -99,8 +119,8 @@ export class DetailsPageComponent implements OnInit {
   updateCart(cartUpdate:any) {
     if(parseInt(cartUpdate.countUpdate) > 0) {
       let newItem = Object.assign({},this.item);
-      // let newItemUID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
-      let newItemUID = generate();
+      let newItemUID = uuidv4(); //uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+      // let newItemUID = generate();
       newItem.productType = cartUpdate.productType;
       newItem.productSize = cartUpdate.productSize;
       newItem.itemID = newItemUID;

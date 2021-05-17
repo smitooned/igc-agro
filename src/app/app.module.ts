@@ -21,6 +21,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { TextInvoiceComponent } from './text-invoice/text-invoice.component';
 import { EndScreenComponent } from './end-screen/end-screen.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { RouteGuardServiceService } from './route-guard-service.service'
 
 @NgModule({
   declarations: [
@@ -48,11 +49,11 @@ import { CheckoutComponent } from './checkout/checkout.component';
     RouterModule.forRoot([
     // {path: 'landing', component: LandingPageComponent},
     {path: '', component: LandingPageComponent},
-    {path: 'details', component: DetailsPageComponent}
+    {path: 'details', component: DetailsPageComponent, canDeactivate: [RouteGuardServiceService]}
   ]),
     NgbModule,
   ],
-  providers: [],
+  providers: [RouteGuardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
