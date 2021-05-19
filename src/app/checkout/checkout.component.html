@@ -4,9 +4,12 @@
         <div class="shipping-box-container">
             <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="shipping-box">
                 <div class="no-form">
-                    <div class="box-name">{{item.rxtx.to}}'s Kit</div>
-                    <div class="shipping-details-button" (click)="showDetails(item.productSize, i)">Show Details
-                    </div>
+                  <div class="boxLeftContainer">
+                    <p class="box-name">{{item.rxtx.to}}'s Kit</p>
+                    <p class="boxMeta">Pack of {{item.packOf}}</p>
+                  </div>
+                  <div class="shipping-details-button" (click)="showDetails(item.productSize, i)">Show Details
+                  </div>
                 </div>
 
                 <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
@@ -24,7 +27,10 @@
         <div class="shipping-box-container">
             <div *ngFor="let item of cart.items.A2; let i = index" [attr.data-index]="i" class="shipping-box">
                 <div class="no-form">
-                    <div class="box-name">{{item.rxtx.to}}'s Kit</div>
+                  <div class="boxLeftContainer">
+                    <p class="box-name">{{item.rxtx.to}}'s Kit</p>
+                    <p class="boxMeta">Pack of {{item.packOf}}</p>
+                  </div>
                     <div class="shipping-details-button" (click)="showDetails(item.productSize, i)">Show Details
                     </div>
                 </div>
@@ -44,7 +50,10 @@
         <div class="shipping-box-container">
             <div *ngFor="let item of cart.items.A3; let i = index" [attr.data-index]="i" class="shipping-box">
                 <div class="no-form">
-                    <div class="box-name">{{item.rxtx.to}}'s Kit</div>
+                  <div class="boxLeftContainer">
+                    <p class="box-name">{{item.rxtx.to}}'s Kit</p>
+                    <p class="boxMeta">Pack of {{item.packOf}}</p>
+                  </div>
                     <div class="shipping-details-button" (click)="showDetails(item.productSize, i)">Show Details
                     </div>
                 </div>
@@ -64,11 +73,11 @@
     <div class="A1SizeBoxes" *ngIf="cart.items.A1.length > 0">
         <div class="confirm-row">
             <div class="name">
-                {{cart.items.A1.productType}} A1 Size<br>
-                Rs. {{priceA1}} x {{cart.items.A1.length}}
+                <b>{{cart.items.A1.productType}} A1 Size Kits</b><br>
+                Pack of 10:&nbsp; Rs. {{priceList["COVIDWarriorKit"]["A1_10"]}} x {{cart.items.A1.length}}
             </div>
             <div class="price">
-                Rs. {{totalA1Cost}}
+                <b>Rs. {{totalA1_10_Cost}}</b>
             </div>
         </div>
     </div>
@@ -76,11 +85,12 @@
     <div class="A2SizeBoxes" *ngIf="cart.items.A2.length > 0">
         <div class="confirm-row">
             <div class="name">
-                {{cart.items.A2.productType}} A2 Size<br>
-                Rs. {{priceA2}} x {{cart.items.A2.length}}
+                <b>{{cart.items.A2.productType}} A2 Size Kits</b><br>
+                Pack of 6:&nbsp; Rs. {{priceList["COVIDWarriorKit"]["A2_6"]}} x {{getCount(6, 'A2')}}<br>
+                Pack of 10:&nbsp; Rs. {{priceList["COVIDWarriorKit"]["A2_10"]}} x {{getCount(10, 'A2')}}
             </div>
             <div class="price">
-                Rs. {{totalA2Cost}}
+                <b>Rs. {{totalA2_6_Cost + totalA2_10_Cost}}</b>
             </div>
         </div>
     </div>
@@ -88,11 +98,12 @@
     <div class="A3SizeBoxes" *ngIf="cart.items.A3.length > 0">
         <div class="confirm-row">
             <div class="name">
-                {{cart.items.A3.productType}} A3 Size<br>
-                Rs. {{priceA3}} x {{cart.items.A3.length}}
+                <b>{{cart.items.A3.productType}} A3 Size Kits</b><br>
+                Pack of 6:&nbsp; Rs. {{priceList["COVIDWarriorKit"]["A2_6"]}} x {{getCount(6, 'A2')}}<br>
+                Pack of 10:&nbsp; Rs. {{priceList["COVIDWarriorKit"]["A2_10"]}} x {{getCount(10, 'A2')}}
             </div>
             <div class="price">
-                Rs. {{totalA3Cost}}
+                <b>Rs. {{totalA3_6_Cost + totalA3_10_Cost}}</b>
             </div>
         </div>
     </div>
