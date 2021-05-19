@@ -22,8 +22,7 @@
 
             </div>
 
-            <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize"
-                class="shipping-form-container">
+            <div *ngIf="selectedProductIndex == i && selectedProductSize == item.productSize" class="shipping-form-container">
                 <hr>
                 <ng-container [ngTemplateOutlet]="simpleLink" [ngTemplateOutletContext]="{item:item, index: i}">
                 </ng-container>

@@ -72,8 +72,11 @@ export class ShippingComponent implements OnInit {
       recipientContact:"",
       isComplete: false
     }
-
     this.handleBoxConfigUpdate(this.cart);
+
+    if (this.isSameBillingAddress) {
+      
+    }
   }
 
   discardButtonAction(productSize: any, index: any){
