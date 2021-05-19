@@ -22,7 +22,8 @@ import { TextInvoiceComponent } from './text-invoice/text-invoice.component';
 import { EndScreenComponent } from './end-screen/end-screen.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RouteGuardServiceService } from './route-guard-service.service';
-import { AddToCartComponent } from './add-to-cart/add-to-cart.component'
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { ShippingUpdatedComponent } from './shipping-updated/shipping-updated.component'
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component'
     TextInvoiceComponent,
     EndScreenComponent,
     CheckoutComponent,
-    AddToCartComponent
+    AddToCartComponent,
+    ShippingUpdatedComponent
   ],
   imports: [
     BrowserModule,

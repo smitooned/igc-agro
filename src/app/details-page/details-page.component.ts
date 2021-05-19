@@ -76,7 +76,8 @@ export class DetailsPageComponent implements OnInit {
       recipientContact:'',
       isValid: null,
       isComplete: false
-    }
+    },
+    packOf:''
   }
 
   priceList: any = {
@@ -84,6 +85,13 @@ export class DetailsPageComponent implements OnInit {
       A1: 499,
       A2: 599,
       A3: 699
+    },
+    COVIDWarriorKit: {
+      A1_10: 799,
+      A2_6: 599,
+      A2_10: 899,
+      A3_6: 699,
+      A3_10: 999
     },
     devgadAlphonso: {
       A1: 499,
@@ -134,12 +142,14 @@ export class DetailsPageComponent implements OnInit {
       newItem.productType = cartUpdate.productType;
       newItem.productSize = cartUpdate.productSize;
       newItem.itemID = newItemUID;
+      newItem.packOf = cartUpdate.packOf;
       this.cart.items[cartUpdate.productSize].push(newItem);
     } else {
       if(this.cart.cartStage.cartProgress > 1) {
         // do nothing
       } else {
-        this.cart.items[cartUpdate.productSize].pop();
+        let itemIndex = this.cart.items[cartUpdate.productSize].findIndex((x:any) => x.packOf == cartUpdate.packOf);
+        this.cart.items[cartUpdate.productSize].splice(itemIndex, 1);
       }
     }
     if((this.cart.items["A1"].length > 0) || (this.cart.items["A2"].length > 0) || (this.cart.items["A3"].length > 0)) {

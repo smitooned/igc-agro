@@ -2,16 +2,15 @@
     box-shadow: 0px 3px 6px #00000014;
     width: 100%;
     background-color: white;
-    border-radius: 20px;
-    padding: 10px;
-    height: 100px;
+    border-radius: 10px;
+    padding: 3%;
+    height: auto;
     margin-bottom: 15px;
 }
 
 .box-arrangement-type-container{
     margin-top: 10px;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
 }
 
 .box-arrangement-type{
@@ -55,4 +54,9 @@ p{
     padding: 1rem 0.3rem;
     border-radius: 1rem;
     margin-top: 0.5rem;
+}
+
+.boxMeta{
+    font-size: 0.9rem;
+    opacity: 0.85;
 }

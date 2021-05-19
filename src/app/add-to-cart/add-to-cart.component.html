@@ -30,40 +30,59 @@
   </div> -->
 
   <p id="orderSummaryHeader">Select Your Kit</p>
+
   <div class="summaryBox">
     <span class="typeOfSection">Covid Warrior Kit A1</span>
-    <div class="d-flex justify-content-between">
-      <span><b>Rs 499</b>/box</span>
+    <div class="d-flex justify-content-between cartCTAs">
+      <div class="typeOfSection_price">Pack of 10:&nbsp;<b>Rs {{priceList["COVIDWarriorKit"]["A1_10"]}}</b>/box</div>
       <div class="ms-auto countBtn">
-        <button type="button" name="button" (click)="updateCart($event,-1,'A1', 'COVID Box')">-</button>
-        <span id="count">{{cart.items.A1.length}}</span>
-        <button type="button" name="button" (click)="updateCart($event,1,'A1', 'COVID Box')">+</button>
+        <button type="button" name="button" (click)="updateCart($event,-1,'A1', 'Warrior Kit', 10)">-</button>
+        <span id="count">{{getCount('10', 'A1')}}</span>
+        <button type="button" name="button" (click)="updateCart($event,1,'A1', 'Warrior Kit', 10)">+</button>
       </div>
     </div>
   </div>
 
   <div class="summaryBox">
-    <span class="typeOfSection">Covid Warrior Kit A2</span>
-    <div class="d-flex justify-content-between">
-      <span><b>Rs 599</b>/box</span>
+    <span class="typeOfSection">Covid Warrior Kit A2  (Pack of 6)</span>
+    <div class="d-flex justify-content-between cartCTAs">
+      <div class="typeOfSection_price">Pack of 6:&nbsp;<b> Rs {{priceList["COVIDWarriorKit"]["A2_6"]}}</b>/box</div>
       <div class="ms-auto countBtn">
-        <button type="button" name="button" (click)="updateCart($event, -1, 'A2', 'COVID Box')">-</button>
-        <span id="count">{{cart.items.A2.length}}</span>
-        <button type="button" name="button" (click)="updateCart($event, 1, 'A2', 'COVID Box')">+</button>
+        <button type="button" name="button" (click)="updateCart($event, -1, 'A2', 'Warrior Kit', 6)">-</button>
+        <span id="count">{{getCount('6', 'A2')}}</span>
+        <button type="button" name="button" (click)="updateCart($event, 1, 'A2', 'Warrior Kit', 6)">+</button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between cartCTAs">
+      <div class="typeOfSection_price">Pack of 10:&nbsp;<b>Rs {{priceList["COVIDWarriorKit"]["A2_10"]}}</b>/box</div>
+      <div class="ms-auto countBtn">
+        <button type="button" name="button" (click)="updateCart($event, -1, 'A2', 'Warrior Kit', 10)">-</button>
+        <span id="count">{{getCount('10', 'A2')}}</span>
+        <button type="button" name="button" (click)="updateCart($event, 1, 'A2', 'Warrior Kit', 10)">+</button>
       </div>
     </div>
   </div>
 
+
   <div class="summaryBox">
-  <span class="typeOfSection">Covid Warrior Kit A3</span>
-    <div class="d-flex justify-content-between">
-      <span><b>Rs 699</b>/box</span>
+    <span class="typeOfSection">Covid Warrior Kit A3  (Pack of 6)</span>
+    <div class="d-flex justify-content-between cartCTAs">
+      <div class="typeOfSection_price">Pack of 6:&nbsp;<b>Rs {{priceList["COVIDWarriorKit"]["A3_6"]}}</b>/box</div>
       <div class="ms-auto countBtn">
-        <button type="button" name="button" (click)="updateCart($event, -1, 'A3', 'COVID Box')">-</button>
-        <span id="count">{{cart.items.A3.length}}</span>
-        <button type="button" name="button" (click)="updateCart($event, 1, 'A3', 'COVID Box')">+</button>
+        <button type="button" name="button" (click)="updateCart($event, -1, 'A3', 'Warrior Kit', 6)">-</button>
+        <span id="count">{{getCount('6', 'A3')}}</span>
+        <button type="button" name="button" (click)="updateCart($event, 1, 'A3', 'Warrior Kit', 6)">+</button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between cartCTAs">
+      <div class="typeOfSection_price">Pack of 10:&nbsp;<b>Rs {{priceList["COVIDWarriorKit"]["A3_10"]}}</b>/box</div>
+      <div class="ms-auto countBtn">
+        <button type="button" name="button" (click)="updateCart($event, -1, 'A3', 'Warrior Kit', 10)">-</button>
+        <span id="count">{{getCount('10', 'A3')}}</span>
+        <button type="button" name="button" (click)="updateCart($event, 1, 'A3', 'Warrior Kit', 10)">+</button>
       </div>
     </div>
   </div>
+
   <br>
 </ng-template>

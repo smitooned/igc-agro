@@ -3,6 +3,12 @@
     font-size: 1rem;
 }
 
+.boxMeta{
+    margin: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
 .detailBox{
     background-color: #FFFFFF;
     border-radius: 0.7rem;
@@ -20,6 +26,7 @@ button{
     border: 2px #F29722 !important;
     color: #F29722;
     margin: 0rem !important;
+    margin-right: 3% !important;
     padding: 0.3rem;
 }
 
@@ -46,12 +53,14 @@ button{
   width: 50%;
   text-align: left;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .buttonContainer {
   width: 50%;
   display: inline-block;
   text-align: right;
+  vertical-align: middle;
 }
 
 .detailBoxHead {

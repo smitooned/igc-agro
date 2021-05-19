@@ -82,6 +82,16 @@ h5{
   font-size: 1.1rem;
 }
 
+.cartCTAs {
+  margin: 5px 0px;
+}
+
+.typeOfSection_price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .orderNowBtnContainer {
   text-align: center;
 }

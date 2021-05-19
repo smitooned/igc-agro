@@ -1,0 +1,143 @@
+<div class="addNewAddress">
+  <button class="btn btn-outline-primary addNewAddressBtn" (click)="open(content)"></button>
+</div>
+
+<div class="shippingAddressTuple">
+    <!-- <div class="box-name">{{shippingDetails.address_line_1}}, {{shippingDetails.address_line_2}}</div>
+    <div class="configuredFormControl" *ngIf="cart.items.A1[i].shippingDetails.isComplete">
+      <div class="configuredBadge">
+        <img id="configuredBadgeLogo" src="../assets/formConfigured.svg">
+        <span class="configuredText">Configured</span>
+      </div>
+      <div
+         class="shipping-details-button-edit"
+         type="button">
+         Edit
+       </div>
+     </div> -->
+</div>
+
+
+<!-- Address Form -->
+<!-- <ng-template #simpleLink let-item='item' let-index='index'>
+    <div class="shipping-form">
+        <div class="shipping-form-input">
+            <div class="label">
+                Address Line 1:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter address" [(ngModel)]="shippingDetails.address_line_1">
+            </div>
+
+            <div class="label">
+                Address Line 2:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter address" [(ngModel)]="shippingDetails.address_line_2">
+            </div>
+
+            <div class="label">
+                Enter City:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter City" [(ngModel)]="shippingDetails.city">
+            </div>
+
+            <div class="label">
+                Enter Pincode:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter pincode" type="number" [(ngModel)]="shippingDetails.pincode">
+            </div>
+
+            <div class="label">
+                Enter Nearest Landmark:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter nearest landmark" [(ngModel)]="shippingDetails.landmark">
+            </div>
+
+            <div class="label">
+                Recipient Contact:-
+            </div>
+            <div class="input-box">
+                <input placeholder="Enter Recipient Contact Number" type="number" [(ngModel)]="shippingDetails.recipientContact">
+            </div>
+        </div>
+
+        <div class="button-container">
+            <div class="discard-button" (click)="discardButtonAction(item.productSize, index)">
+                Discard
+            </div>
+            <div class="save-button" (click)="saveButtonAction(item.productSize, index, item)">
+                Save
+            </div>
+        </div>
+    </div>
+</ng-template> -->
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <div class="shipping-form-input">
+        <div class="label">
+            Address Line 1:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Enter address" [(ngModel)]="shippingDetails.address_line_1">
+        </div>
+
+        <div class="label">
+            Address Line 2:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Enter address" [(ngModel)]="shippingDetails.address_line_2">
+        </div>
+
+        <div class="label">
+            Enter City:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Enter City" [(ngModel)]="shippingDetails.city">
+        </div>
+
+        <div class="label">
+            Enter Pincode:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Enter pincode" type="number" [(ngModel)]="shippingDetails.pincode">
+        </div>
+
+        <div class="label">
+            Enter Nearest Landmark:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Enter nearest landmark" [(ngModel)]="shippingDetails.landmark">
+        </div>
+
+        <div class="label">
+            Recipient Contact:-
+        </div>
+        <div class="input-box">
+            <input placeholder="Enter Recipient Contact Number" type="number" [(ngModel)]="shippingDetails.recipientContact">
+        </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <!-- <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button> -->
+    <!-- <div class="discard-button" (click)="modal.close('Save click')">
+        Discard
+    </div> -->
+    <div class="save-button" (click)="modal.close('Save click')">
+        Save
+    </div>
+  </div>
+</ng-template>

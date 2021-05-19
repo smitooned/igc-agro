@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Input, Output, EventEmitter } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
-  selector: 'app-shipping',
-  templateUrl: './shipping.component.html',
-  styleUrls: ['./shipping.component.css']
+  selector: 'app-shipping-updated',
+  templateUrl: './shipping-updated.component.html',
+  styleUrls: ['./shipping-updated.component.css']
 })
-export class ShippingComponent implements OnInit {
+export class ShippingUpdatedComponent implements OnInit {
 
   @Input() cart: any;
   @Output() updateShippingStage = new EventEmitter<object>();
@@ -30,7 +32,8 @@ export class ShippingComponent implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
+  closeResult = '';
 
   ngOnInit(): void {
   }
@@ -73,7 +76,7 @@ export class ShippingComponent implements OnInit {
       isComplete: false
     }
     this.handleBoxConfigUpdate(this.cart);
-    // 
+    //
     // if (this.isSameBillingAddress) {
     //
     // }
@@ -87,4 +90,14 @@ export class ShippingComponent implements OnInit {
     console.log(event);
     this.updateShippingStage.emit(event);
   }
+
+  open(content:any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+
 }

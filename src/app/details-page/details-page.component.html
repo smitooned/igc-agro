@@ -17,10 +17,13 @@
       <!-- main canvas: center -->
       <div class="col-lg-6 descriptionDiv" [ngClass]="cart.cartStage.currentStage == -1 ? 'descriptionOuter': 'descriptionInner'"  [ngSwitch]="cart.cartStage.currentStage">
         <app-description [btnType]="selectedBtn" *ngSwitchCase="-1" ></app-description>
-        <app-add-to-cart *ngSwitchCase="0" (cartItemsUpdatedEvent)="updateCart($event)" [cart]="cart" [allItemsConfigured]="allItemsConfigured"></app-add-to-cart>
+        <app-add-to-cart *ngSwitchCase="0" (cartItemsUpdatedEvent)="updateCart($event)" [cart]="cart" [allItemsConfigured]="allItemsConfigured" [priceList]="priceList"></app-add-to-cart>
         <app-configure-boxes *ngSwitchCase="1" [cart]="cart" (boxConfigUpdatedByChild)="updateBoxConfig($event)"></app-configure-boxes>
         <app-arrangement *ngSwitchCase="2" [cart]="cart" (updateArrangementStage)="updateArrangementStage($event)"></app-arrangement>
+        <!-- shipping -->
         <app-shipping *ngSwitchCase="3" [cart]="cart" (updateShippingStage)="updateShippingStage($event)"></app-shipping>
+
+        <!-- <app-shipping-updated *ngSwitchCase="3" [cart]="cart" (updateShippingStage)="updateShippingStage($event)"></app-shipping-updated> -->
         <app-checkout *ngSwitchCase="4" [cart]="cart" [priceList]="priceList" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
         <app-checkout *ngSwitchCase="5" [cart]="cart" [priceList]="priceList" (updateShippingStage)="updateCheckoutStage($event)"></app-checkout>
         <app-end-screen *ngSwitchCase="6" [cart]="cart" [priceList]="priceList"></app-end-screen>

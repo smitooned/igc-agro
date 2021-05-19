@@ -2,7 +2,7 @@
     <p>A1 Size Boxes</p>
     <div class="arrangement-box-container">
         <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="arrangement-box">
-            <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+            <div class="box-name">{{item.rxtx.to}}'s Kit <span class="boxMeta">- Pack of {{item.packOf}}</span></div>
             <div class="box-arrangement-type-container">
                 <div [ngClass] = 'item.boxArrangement == "Raw" ? "box-arrangement-type active" : "box-arrangement-type"' (click)="changeType('Raw', item.productSize, i)">Raw</div>
                 <div [ngClass] = 'item.boxArrangement == "Ready" ? "box-arrangement-type active" : "box-arrangement-type"' (click)="changeType('Ready', item.productSize, i)">Ready</div>
@@ -16,7 +16,7 @@
     <p>A2 Size Boxes</p>
     <div class="arrangement-box-container">
         <div *ngFor="let item of cart.items.A2; let i = index" [attr.data-index]="i" class="arrangement-box">
-            <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+            <div class="box-name">{{item.rxtx.to}}'s Kit <span class="boxMeta">- Pack of {{item.packOf}}</span></div>
             <div class="box-arrangement-type-container">
                 <div [ngClass] = 'item.boxArrangement == "Raw" ? "box-arrangement-type active" : "box-arrangement-type"' (click)="changeType('Raw', item.productSize, i)">Raw</div>
                 <div [ngClass] = 'item.boxArrangement == "Ready" ? "box-arrangement-type active" : "box-arrangement-type"' (click)="changeType('Ready', item.productSize, i)">Ready</div>
@@ -30,7 +30,7 @@
     <p>A3 Size Boxes</p>
     <div class="arrangement-box-container">
         <div *ngFor="let item of cart.items.A3; let i = index" [attr.data-index]="i" class="arrangement-box">
-            <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+            <div class="box-name">{{item.rxtx.to}}'s Kit <span class="boxMeta">- Pack of {{item.packOf}}</span></div>
             <div class="box-arrangement-type-container">
                 <div [ngClass] = 'item.boxArrangement == "Raw" ? "box-arrangement-type active" : "box-arrangement-type"' (click)="changeType('Raw', item.productSize, i)">Raw</div>
                 <div [ngClass] = 'item.boxArrangement == "Ready" ? "box-arrangement-type active" : "box-arrangement-type"' (click)="changeType('Ready', item.productSize, i)">Ready</div>

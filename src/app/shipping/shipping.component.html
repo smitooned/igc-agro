@@ -3,7 +3,7 @@
     <div class="shipping-box-container">
         <div *ngFor="let item of cart.items.A1; let i = index" [attr.data-index]="i" class="shipping-box">
             <div class="no-form">
-                <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+                <div class="box-name">{{item.rxtx.to}}'s Kit <span class="boxMeta">- Pack of {{item.packOf}}</span></div>
                 <div class="shipping-details-button" (click)="expandForm(item.productSize, i)" *ngIf="!cart.items.A1[i].shippingDetails.isComplete">Add Shipping details
                 </div>
 
@@ -36,7 +36,7 @@
     <div class="shipping-box-container">
         <div *ngFor="let item of cart.items.A2; let i = index" [attr.data-index]="i" class="shipping-box">
             <div class="no-form">
-                <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+                <div class="box-name">{{item.rxtx.to}}'s Kit <span class="boxMeta">- Pack of {{item.packOf}}</span></div>
                 <div class="shipping-details-button" (click)="expandForm(item.productSize, i)" *ngIf="!cart.items.A2[i].shippingDetails.isComplete">Add Shipping details
                 </div>
                 <div class="configuredFormControl" *ngIf="cart.items.A2[i].shippingDetails.isComplete">
@@ -71,7 +71,7 @@
     <div class="shipping-box-container">
         <div *ngFor="let item of cart.items.A3; let i = index" [attr.data-index]="i" class="shipping-box">
             <div class="no-form">
-                <div class="box-name">{{item.rxtx.to}}'s {{item.productType}}</div>
+                <div class="box-name">{{item.rxtx.to}}'s Kit <span class="boxMeta">- Pack of {{item.packOf}}</span></div>
                 <div class="shipping-details-button" (click)="expandForm(item.productSize, i)" *ngIf="!cart.items.A3[i].shippingDetails.isComplete">Add Shipping details
                 </div>
                 <div class="configuredFormControl" *ngIf="cart.items.A3[i].shippingDetails.isComplete">
