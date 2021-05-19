@@ -92,6 +92,7 @@ export class DetailsPageComponent implements OnInit {
   };
 
 
+
   closing() {
     // this.canDeactivate();
 

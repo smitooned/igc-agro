@@ -9,6 +9,8 @@ export class LandingPageComponent implements OnInit {
 
   constructor() { }
 
+  selectedDes:any = "mangoes";
+
   showDetail:any={
     header:'',
     text:{
@@ -51,6 +53,7 @@ export class LandingPageComponent implements OnInit {
 
   switchDetail(event:any) {
     this.changeDetail(event.target.dataset.btn);
+    this.selectedDes = event.target.dataset.btn;
   }
   changeDetail(btnType:any){
     if(btnType=='mangoes'){

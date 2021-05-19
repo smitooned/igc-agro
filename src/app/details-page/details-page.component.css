@@ -5,13 +5,37 @@
 .descriptionDiv{
   margin: 0.3rem 0rem;
   max-height: 80%;
-  overflow: scroll ;
+  overflow: scroll;
+}
+
+.descriptionInner {
+  height: 74vh;
+}
+
+.descriptionOuter {
+  height: 85vh;
 }
 
 .inputDiv{
-  margin-bottom: 0.4rem;
+  /* margin-bottom: 0.4rem; */
 }
 
 .btn:focus{
     box-shadow:none !important;
+}
+
+.bottomPanel {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #ffffff82;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border-top: 1px #DFDFDF solid;
+}
+
+.bottomFiller {
+  height: 10vh;
+  width: 100%;
+  background-color: white;
 }

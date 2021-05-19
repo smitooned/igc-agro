@@ -27,6 +27,7 @@
           </div>
         </div>
 
+
          <div class="upper">
             <!-- <div class="logoDiv">
                <img class="img-fluid" id="logo" src="../assets/logo.png" alt="indiagold logo">
@@ -40,7 +41,7 @@
                      </div>
                      <hr>
                      <div class="switchBtn">
-                        <button type="button" class="btn featureBtn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
+                        <button type="button {{selectedDes == 'mangoes' ? 'selected': ''}}" class="btn featureBtn" data-bs-toggle="button" data-btn="mangoes" (click)="switchDetail($event)" autocomplete="off">
                           <img class="mangoesBtn" src="../assets/mango.svg" alt=""  data-btn="mangoes">
                         </button>
                         <button type="button" class="btn featureBtn" data-bs-toggle="button" data-btn="covidTools" (click)="switchDetail($event)" autocomplete="off">

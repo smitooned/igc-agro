@@ -14,7 +14,6 @@ export class DescriptionSliderLeftComponent implements OnInit {
   selectedTab: any = "covidBox";
 
   ngOnInit(): void {
-
     this.newItemEvent.emit('selectedBtn');
   }
 
@@ -24,6 +23,4 @@ export class DescriptionSliderLeftComponent implements OnInit {
     this.newItemEvent.emit(event.target.dataset.btn);
     this.selectedTab = event.target.dataset.btn;
   }
-
-  // localStorage.setItem('selectedBtn');
 }

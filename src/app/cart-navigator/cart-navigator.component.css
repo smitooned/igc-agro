@@ -61,3 +61,7 @@ img{
   height: auto;
   margin: 0.25rem;
 }
+
+.stepLabel {
+  font-size: 0.9rem;
+}

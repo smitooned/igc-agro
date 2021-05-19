@@ -87,3 +87,7 @@ button{
   height: auto;
   width: 20%;
 }
+
+.requiredMark {
+  color: red;
+}

@@ -21,7 +21,8 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { TextInvoiceComponent } from './text-invoice/text-invoice.component';
 import { EndScreenComponent } from './end-screen/end-screen.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { RouteGuardServiceService } from './route-guard-service.service'
+import { RouteGuardServiceService } from './route-guard-service.service';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { RouteGuardServiceService } from './route-guard-service.service'
     ShippingComponent,
     TextInvoiceComponent,
     EndScreenComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,

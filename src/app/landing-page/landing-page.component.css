@@ -197,3 +197,8 @@ a{
 .featureBtn {
   border-radius: 0px;
 }
+
+.selected {
+  border-bottom: 1.5px solid #33322f;
+  border-radius: 0px;
+}

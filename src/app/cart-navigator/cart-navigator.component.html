@@ -9,107 +9,164 @@
 </div>
 
 
-<div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 1">
+<div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 0">
   <div class="stepContainer">
     <img src="../assets/cartOngoing.svg" alt=""  data-btn="">
-    <div><span>Cart</span></div>
+    <div class="stepLabel"><span>Cart</span></div>
   </div>
+
+  <div class="stepContainer">
+    <img src="../assets/messagePending.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Message</span></div>
+  </div>
+
   <div class="stepContainer">
     <img src="../assets/boxArrangementPending.svg" alt=""  data-btn="">
-    <div><span>Arrangement</span></div>
+    <div class="stepLabel"><span>Phase</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/shippingPending.svg" alt=""  data-btn="">
-    <div><span>Shipping</span></div>
+    <div class="stepLabel"><span>Shipping</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/checkoutPending.svg" alt=""  data-btn="">
-    <div><span>Checkout</span></div>
+    <div class="stepLabel"><span>Checkout</span></div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 1">
+  <div class="stepContainer">
+    <img src="../assets/processDone.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Cart</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/messageOngoing.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Message</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/boxArrangementPending.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Phase</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/shippingPending.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Shipping</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/checkoutPending.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Checkout</span></div>
   </div>
 </div>
 
 <div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 2">
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Cart</span></div>
+    <div class="stepLabel"><span>Cart</span></div>
   </div>
+
+  <div class="stepContainer">
+    <img src="../assets/processDone.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Message</span></div>
+  </div>
+
   <div class="stepContainer">
     <img src="../assets/boxArrangementOngoing.svg" alt=""  data-btn="">
-    <div><span>Arrangement</span></div>
+    <div class="stepLabel"><span>Arrangement</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/shippingPending.svg" alt=""  data-btn="">
-    <div><span>Shipping</span></div>
+    <div class="stepLabel"><span>Shipping</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/checkoutPending.svg" alt=""  data-btn="">
-    <div><span>Checkout</span></div>
+    <div class="stepLabel"><span>Checkout</span></div>
   </div>
 </div>
 
 <div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 3">
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Cart</span></div>
+    <div class="stepLabel"><span>Cart</span></div>
   </div>
+
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Arrangement</span></div>
+    <div class="stepLabel"><span>Message</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/processDone.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Arrangement</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/shippingOngoing.svg" alt=""  data-btn="">
-    <div><span>Shipping</span></div>
+    <div class="stepLabel"><span>Shipping</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/checkoutPending.svg" alt=""  data-btn="">
-    <div><span>Checkout</span></div>
+    <div class="stepLabel"><span>Checkout</span></div>
   </div>
 </div>
 
 <div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 4 || cart.cartStage.currentStage == 5">
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Cart</span></div>
-  </div>
-  <div class="stepContainer">
-    <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Arrangement</span></div>
+    <div class="stepLabel"><span>Cart</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Shipping</span></div>
+    <div class="stepLabel"><span>Message</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/processDone.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Arrangement</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/processDone.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Shipping</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/checkoutOngoing.svg" alt=""  data-btn="">
-    <div><span>Checkout</span></div>
+    <div class="stepLabel"><span>Checkout</span></div>
   </div>
 </div>
 
 <div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 6">
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Cart</span></div>
-  </div>
-  <div class="stepContainer">
-    <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Arrangement</span></div>
+    <div class="stepLabel"><span>Cart</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Shipping</span></div>
+    <div class="stepLabel"><span>Message</span></div>
   </div>
 
   <div class="stepContainer">
     <img src="../assets/processDone.svg" alt=""  data-btn="">
-    <div><span>Checkout</span></div>
+    <div class="stepLabel"><span>Arrangement</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/processDone.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Shipping</span></div>
+  </div>
+
+  <div class="stepContainer">
+    <img src="../assets/processDone.svg" alt=""  data-btn="">
+    <div class="stepLabel"><span>Checkout</span></div>
   </div>
 </div>
