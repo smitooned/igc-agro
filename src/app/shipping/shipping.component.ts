@@ -12,6 +12,7 @@ export class ShippingComponent implements OnInit {
   @Output() updateShippingStage = new EventEmitter<object>();
 
   isFormComplete: boolean = false;
+  isSameBillingAddress: boolean = false;
 
   selectedProductSize: any = '';
   selectedProductIndex: any = -1;

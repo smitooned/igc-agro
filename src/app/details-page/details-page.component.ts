@@ -64,7 +64,7 @@ export class DetailsPageComponent implements OnInit {
       isValid:null,
       isComplete:false
     },
-    boxArrangement:'Raw',
+    boxArrangement:'Ready',
     shippingDetails: {
       region: '',
       nearestCentre: '',

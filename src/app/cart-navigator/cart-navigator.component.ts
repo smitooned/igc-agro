@@ -21,8 +21,9 @@ export class CartNavigatorComponent implements OnInit {
   }
 
   moveToClickedStage(cartUpdate:any) {
-    console.log(event);
-    this.cartNavigateUsed.emit(cartUpdate);
+    if(cartUpdate <= this.cart.cartStage.cartProgress) {
+      this.cartNavigateUsed.emit(cartUpdate);
+    }
   }
 
   getImageURI(cartStage:any) {

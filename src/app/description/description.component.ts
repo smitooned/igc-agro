@@ -28,14 +28,17 @@ export class DescriptionComponent implements OnInit {
       header:'',
       imgsrc:'../assets/covidWarriorKit.jpeg',
       description:{
-        header:'Box includes :',
-        first:'6 Alphonso Mangoes',
-        second:{
-          a:'2 N95 Masks',
-          b:'Sanitizer',
-          c:'No touch Covid key'
+        header:'Warrior Kit includes :',
+        first:{
+          a: '6 Devgad Alphonso Mangoes',
+          b: '100% natural & organic'
         },
-        third:'Rs 99/- donated to Maansuki foundation',
+        second:{
+          a:'2 ISI Certified N95 Masks',
+          b:'Hand sanitizer',
+          c:'No touch COVID key'
+        },
+        third:'For every box purchase, we will donate Rs 99/- to Maansuki foundation to help COVID affected communities',
         isAvailable: true
       }
   };
