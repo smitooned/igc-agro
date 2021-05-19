@@ -2,16 +2,16 @@
   <div class="container">
     <div class="row">
       <!-- left panel -->
-      <div class="col-lg-3 d-flex flex-column align-items-start-center justify-content-center sliderDiv" [ngSwitch]="cart.cartStage.currentStage">
-        <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="-1"></app-description-slider-left>
+      <div class="col-lg-3 d-flex flex-column align-items-start-center justify-content-center sliderDiv" [ngSwitch]="true">
+        <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="cart.cartStage.currentStage == -1"></app-description-slider-left>
         <!-- <app-description-slider-left (newItemEvent)="addItem($event)" *ngSwitchCase="0"></app-description-slider-left> -->
-        <app-cart-navigator *ngSwitchCase="0" [cart]="cart"></app-cart-navigator>
-        <app-cart-navigator *ngSwitchCase="1" [cart]="cart"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="cart.cartStage.currentStage == 0 || cart.cartStage.currentStage == 1 || cart.cartStage.currentStage == 2 || cart.cartStage.currentStage == 3 || cart.cartStage.currentStage == 4 || cart.cartStage.currentStage == 5 || cart.cartStage.currentStage == 6" [cart]="cart" (cartNavigateUsed)="navigateCart($event)"></app-cart-navigator>
+        <!-- <app-cart-navigator *ngSwitchCase="1" [cart]="cart"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="2" [cart]="cart"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="3" [cart]="cart"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="4" [cart]="cart"></app-cart-navigator>
         <app-cart-navigator *ngSwitchCase="5" [cart]="cart"></app-cart-navigator>
-        <app-cart-navigator *ngSwitchCase="6" [cart]="cart"></app-cart-navigator>
+        <app-cart-navigator *ngSwitchCase="6" [cart]="cart"></app-cart-navigator> -->
       </div>
 
       <!-- main canvas: center -->

@@ -69,11 +69,11 @@
 </ng-template> -->
 <!-- order Now button -->
 <div class="col-md-12" class="orderNowBtnContainer">
-  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == -1 || this.cart.cartStage.currentStage == 0">Order Now</button>
+  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, cart.cartStage.currentStage, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == -1 || this.cart.cartStage.currentStage == 0">Order Now</button>
 
-  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == 1 || this.cart.cartStage.currentStage == 2 || this.cart.cartStage.currentStage == 3">Proceed</button>
+  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, cart.cartStage.currentStage, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == 1 || this.cart.cartStage.currentStage == 2 || this.cart.cartStage.currentStage == 3">Proceed</button>
 
-  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == 4">Confirm Details</button>
+  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, cart.cartStage.currentStage, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == 4">Confirm Details</button>
 
-  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, 0, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == 5">Confirm and Place Order</button>
+  <button class="orderNowBtn" type="submit" (click)="submitOrder($event, cart.cartStage.currentStage, 'Cart Submitted')" [disabled]="!allItemsConfigured.all" *ngIf="this.cart.cartStage.currentStage == 5">Confirm and Place Order</button>
 </div>

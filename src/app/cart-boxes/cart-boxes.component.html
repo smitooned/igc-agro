@@ -41,7 +41,7 @@
       <form ngNativeValidate class="needs-validation" action="" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
          <div class="mb-3">
             <label for="name" class="form-label">To :<span class="requiredMark"> *</span></label>
-            <input type="text" class="form-control" formControlName="to" id="name" placeholder="Your recipient name here" required >
+            <input type="text" class="form-control" formControlName="to" id="name" placeholder="Your recipient name here" required [(ngModel)]="items[index].rxtx.to">
          </div>
          <div class="mb-3">
             <label for="message" class="form-label">Message :</label>

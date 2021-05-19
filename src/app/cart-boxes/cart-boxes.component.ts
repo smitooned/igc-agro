@@ -16,6 +16,8 @@ export class CartBoxesComponent implements OnInit {
   public isCollapsed = true;
   @Input() item: any;
   @Input() index: any;
+  @Input() items: any;
+  @Input() size: any;
   @Output() boxConfigUpdated = new EventEmitter<object>();
 
   isFormComplete: boolean = false;

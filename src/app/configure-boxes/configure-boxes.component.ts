@@ -20,5 +20,7 @@ export class ConfigureBoxesComponent implements OnInit {
     console.log(event);
     this.boxConfigUpdatedByChild.emit(event);
   }
-
+  trackByIdx(index: number, obj: any): any {
+    return index;
+  }
 }

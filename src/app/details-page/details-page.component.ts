@@ -39,7 +39,15 @@ export class DetailsPageComponent implements OnInit {
       boxesArranged: false,
       shippingConfigured: false,
       checkoutConfirmed: false,
-      whatsappVerified: false
+      whatsappVerified: false,
+      0: false,
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: false,
+      6: false,
+      cartProgress: -1
     }
   }
 
@@ -128,23 +136,34 @@ export class DetailsPageComponent implements OnInit {
       newItem.itemID = newItemUID;
       this.cart.items[cartUpdate.productSize].push(newItem);
     } else {
-      this.cart.items[cartUpdate.productSize].pop();
+      if(this.cart.cartStage.cartProgress > 1) {
+        // do nothing
+      } else {
+        this.cart.items[cartUpdate.productSize].pop();
+      }
     }
     if((this.cart.items["A1"].length > 0) || (this.cart.items["A2"].length > 0) || (this.cart.items["A3"].length > 0)) {
       this.allItemsConfigured.all = true;
     } else {
       this.allItemsConfigured.all = false;
     }
+    this.cart.cartStage.cartProgress = 0;
   }
 
   updateCartStage(submitUpdate:any) {
-    console.log("Update cart stage: ",submitUpdate);
-    this.cart.cartStage.currentStage = parseInt(this.cart.cartStage.currentStage) + 1;
+    // console.log("Update cart stage: ",submitUpdate);
+    this.cart.cartStage[submitUpdate["stageComplete"]] = true;
+    this.cart.cartStage.cartProgress = Math.max(this.cart.cartStage.currentStage + 1, this.cart.cartStage.cartProgress);
+    this.cart.cartStage.currentStage = this.cart.cartStage.cartProgress;
     if(this.cart.cartStage.currentStage == 4 || this.cart.cartStage.currentStage == 5) {
       this.allItemsConfigured.all = true;
     }else{
       this.allItemsConfigured.all = false;
     }
+  }
+
+  navigateCart(event:any) {
+    this.cart.cartStage.currentStage = parseInt(event);
   }
 
   updateBoxConfig(update:any) {
@@ -154,19 +173,19 @@ export class DetailsPageComponent implements OnInit {
   }
 
   updateArrangementStage(cart: any){
-    console.log("Updating cart stage: ", cart, this.cart);
+    // console.log("Updating cart stage: ", cart, this.cart);
     this.cart = cart;
     this.allItemsConfigured.all = true;
   }
 
   updateShippingStage(cart: any){
-    console.log("Updating shipping stage: ", cart, this.cart);
+    // console.log("Updating shipping stage: ", cart, this.cart);
     this.cart = cart;
     this.checkForCompletion("shippingDetails");
   }
 
   updateCheckoutStage(cart: any){
-    console.log("Updating Checkout stage: ", cart, this.cart);
+    // console.log("Updating Checkout stage: ", cart, this.cart);
     this.cart = cart;
   }
 

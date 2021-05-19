@@ -9,7 +9,36 @@
 </div>
 
 
-<div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 0">
+<!-- 2nd row new -->
+<div class="d-flex justify-content-around sliderComponent">
+  <div class="stepContainer" (click)="moveToClickedStage(0)" data-cartStage="0">
+    <img [src]="getImageURI(0)" alt=""  data-btn="" data-cartStage="0">
+    <div class="stepLabel"><span>Cart</span></div>
+  </div>
+
+  <div class="stepContainer" (click)="moveToClickedStage(1)" data-cartStage="1">
+    <img [src]="getImageURI(1)" alt=""  data-btn="" data-cartStage="1">
+    <div class="stepLabel"><span>Message</span></div>
+  </div>
+
+  <div class="stepContainer" (click)="moveToClickedStage(2)" data-cartStage="2">
+    <img [src]="getImageURI(2)" alt=""  data-btn="" data-cartStage="2">
+    <div class="stepLabel"><span>Phase</span></div>
+  </div>
+
+  <div class="stepContainer" (click)="moveToClickedStage(3)" data-cartStage="3">
+    <img [src]="getImageURI(3)" alt=""  data-btn="" data-cartStage="3">
+    <div class="stepLabel"><span>Shipping</span></div>
+  </div>
+
+  <div class="stepContainer" (click)="moveToClickedStage(4)" data-cartStage="4">
+    <img [src]="getImageURI(4)" alt=""  data-btn="" data-cartStage="4">
+    <div class="stepLabel"><span>Checkout</span></div>
+  </div>
+</div>
+
+<!-- 2nd row current -->
+<!-- <div class="d-flex justify-content-around sliderComponent" *ngIf="cart.cartStage.currentStage == 0">
   <div class="stepContainer">
     <img src="../assets/cartOngoing.svg" alt=""  data-btn="">
     <div class="stepLabel"><span>Cart</span></div>
@@ -169,4 +198,4 @@
     <img src="../assets/processDone.svg" alt=""  data-btn="">
     <div class="stepLabel"><span>Checkout</span></div>
   </div>
-</div>
+</div> -->
